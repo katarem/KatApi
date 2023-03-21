@@ -1,6 +1,5 @@
 package katarem.lolapi;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
@@ -12,18 +11,20 @@ import katarem.lolapi.api.Summoner;
 
 public class App 
 {
-    public static void main( String[] args ) throws IOException
+    public static void main( String[] args ) throws Exception
     {
-        final String API_KEY = "RGAPI-95244b4a-0316-4135-a607-2fe4251cd59b";
+        final String API_KEY = "RGAPI-cec537e5-5c13-4c01-8c12-57b2c7d285c7";
         final String lang = "es_ES";
         SummonerService sService = new SummonerService(API_KEY, "euw1");
 
-        Summoner yo = sService.getSummoner("ęndless pain");
-
+        Summoner yo = sService.getSummoner("Tuernø");
+        MatchService mService = new MatchService(API_KEY, "europe");
+        ArrayList<String> gameIds = mService.getGames(yo.getPuuid(), API_KEY);
+        // System.out.println(gameIds.get(0));
         ArrayList<Mastery> masteries = sService.getMateries(yo.getId());
-
+        
         LoLService lService = new LoLService();
-
+        Map<String, Champion> campeones = lService.getChampionsData(lService.getLastVersion(), lang).getChampions();
         Map<String, Item> items;
         try {
             items = lService.getItemsData(API_KEY, lang).getData();
@@ -32,6 +33,10 @@ public class App
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        // for (Mastery maestria : masteries) {
+        //     System.out.println("Maestría " + maestria.getChampionLevel() + " " + getChamp(campeones.values(), maestria.getChampionId().toString()) + ": " + maestria.getChampionPoints() + " puntos");
+        // }
 
        
 

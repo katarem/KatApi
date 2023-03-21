@@ -1,63 +1,86 @@
 package katarem.lolapi.api.item;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Image {
+
     @SerializedName("full")
+    @Expose
     private String full;
     @SerializedName("sprite")
+    @Expose
     private String sprite;
     @SerializedName("group")
+    @Expose
     private String group;
     @SerializedName("x")
-    private Double x;
+    @Expose
+    private Integer x;
     @SerializedName("y")
-    private Double y;
+    @Expose
+    private Integer y;
     @SerializedName("w")
-    private Double w;
+    @Expose
+    private Integer w;
     @SerializedName("h")
-    private Double h;
+    @Expose
+    private Integer h;
+
     public String getFull() {
         return full;
     }
+
     public void setFull(String full) {
         this.full = full;
     }
+
     public String getSprite() {
         return sprite;
     }
+
     public void setSprite(String sprite) {
         this.sprite = sprite;
     }
+
     public String getGroup() {
         return group;
     }
+
     public void setGroup(String group) {
         this.group = group;
     }
-    public Double getX() {
+
+    public Integer getX() {
         return x;
     }
-    public void setX(Double x) {
+
+    public void setX(Integer x) {
         this.x = x;
     }
-    public Double getY() {
+
+    public Integer getY() {
         return y;
     }
-    public void setY(Double y) {
+
+    public void setY(Integer y) {
         this.y = y;
     }
-    public Double getW() {
+
+    public Integer getW() {
         return w;
     }
-    public void setW(Double w) {
+
+    public void setW(Integer w) {
         this.w = w;
     }
-    public Double getH() {
+
+    public Integer getH() {
         return h;
     }
-    public void setH(Double h) {
+
+    public void setH(Integer h) {
         this.h = h;
     }
-    
+
 }
