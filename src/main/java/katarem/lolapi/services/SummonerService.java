@@ -23,15 +23,32 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class SummonerService {
     
-    private String BASE_URL = "";
+    private String BASE_URL;
     private LoLInterface service;
     private String API_KEY;
     
+    public static class Builder{
 
-    public SummonerService(String API_KEY, Platform platform){
+        private String BASE_URL;
+        private final String API_KEY;
+
+        public Builder(String API_KEY){
+            this.API_KEY = API_KEY;
+        }
+        public Builder setPlatform(Platform platform){
+            this.BASE_URL = String.format("https://%s.api.riotgames.com/lol/", platform.server);
+            return this;
+        }
+
+        public SummonerService build(){
+            return new SummonerService(this);
+        }
+    }
+
+    private SummonerService(Builder builder){
         //Adapting the URL to the region
-        BASE_URL = String.format("https://%s.api.riotgames.com/lol/", platform.server);
-        this.API_KEY = API_KEY;
+        this.API_KEY = builder.API_KEY;
+        this.BASE_URL = builder.BASE_URL;
 
         //Creating the service
         ConnectionPool pool = new ConnectionPool(1,5,TimeUnit.SECONDS);
@@ -77,7 +94,9 @@ public class SummonerService {
         return elos;
     }
 
-    public ArrayList<Mastery> getMateries(String summonerId) throws IOException{
+
+
+    public ArrayList<Mastery> getMasteries(String summonerId) throws IOException{
         Response<ArrayList<Mastery>> response = service
                 .getMasteries(summonerId, API_KEY)
                 .execute();

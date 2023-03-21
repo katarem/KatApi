@@ -21,16 +21,50 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @version 1.0 March 3rd 2023
  */
 public class MatchService {
-    private static String BASE_URL = "https://europe.api.riotgames.com/lol/";
+    private String BASE_URL;
     private Gson gson = new Gson();
     private LoLInterface service;
     private String API_KEY;
-    public MatchService(String API_KEY, Region region){
+    private Summoner s;
+
+    public static class Builder{
+
+        private String BASE_URL;
+        private String API_KEY;
+        private Summoner s;
+
+        public Builder(){
+
+        }
+
+        public Builder setRegion(Region r){
+            this.BASE_URL = String.format("https://%S.api.riotgames.com/lol/", r.server);
+            return this;
+        }
+
+        public Builder setApiKey(String API_KEY){
+            this.API_KEY = API_KEY;
+            return this;
+        }
+
+        public Builder forSummoner(Summoner s){
+            this.s = s;
+            return this;
+        }
+
+        public MatchService build(){
+            return new MatchService(this);
+        }
+
+    }
+
+    private MatchService(Builder builder){
 
         //Adapting the url to the region
-        BASE_URL = String.format("https://%S.api.riotgames.com/lol/", region.server);
 
-        this.API_KEY = API_KEY;
+        this.API_KEY = builder.API_KEY;
+        this.BASE_URL = builder.BASE_URL;
+        this.s = builder.s;
 
         //Creating the service
         ConnectionPool pool = new ConnectionPool(1,5,TimeUnit.SECONDS);
@@ -53,9 +87,9 @@ public class MatchService {
      * @param puuid -> {@link Summoner#getPuuid()} Specifies the Summoner used for the search
      * @return history List of gameIds
      */
-    public ArrayList<String> getGames(String puuid, String API_KEY) throws Exception{
+    public ArrayList<String> getGames() throws Exception{
         Response<ArrayList<String>> response = service
-                .getGames(puuid, API_KEY)
+                .getGames(s.getPuuid(), API_KEY)
                 .execute();
         assertResponse(response);
         ArrayList<String> history = response.body();

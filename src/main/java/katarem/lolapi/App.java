@@ -13,32 +13,13 @@ public class App
 {
     public static void main( String[] args ) throws Exception
     {
-        final String API_KEY = "RGAPI-06f766a9-f075-4247-bf56-748a040f80d4";
-        SummonerService sService = new SummonerService(API_KEY, Platform.EUROPE_WEST); 
-        Summoner summ = sService.getSummoner("Tuernø");
-        System.out.println(summ.getSummonerLevel());
-        MatchService m = new MatchService(API_KEY, Region.EUROPE);
-        GameInfo lastGame = m.getGame(m.getGames(summ.getPuuid(), API_KEY).get(0));
-        LoLService lService = new LoLService();
-        try {
-            Participant player = new Participant();
-            for (Participant p : lastGame.getInfo().getParticipants()) {
-                if(p.getSummonerId().equals(summ.getId())){
-                    player = p;
-                    break;
-                }
-            }
-        System.out.println(player.getChampionId());;
-
-        Champion champ = lService.getChampionsData(lService.getLastVersion(), Langs.GERMAN).getChampions().get(player.getChampionName());
-        System.out.println(champ.getBlurb());
-        
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+       
+        LoLService service = new LoLService.Builder()
+                                .setLang(Langs.POLISH)
+                                .setVersion("13.3.1")
+                                .build();
 
     }
+}
 
     
-}

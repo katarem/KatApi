@@ -1,5 +1,10 @@
 package katarem.lolapi.api;
 
+import katarem.lolapi.api.game.LeagueEntry;
+import katarem.lolapi.constants.Queue;
+import katarem.lolapi.services.LoLService;
+import katarem.lolapi.services.SummonerService;
+
 /***
  * JavaBean to get the Summoner data
  */
@@ -43,8 +48,10 @@ public class Summoner {
 
     @Override
     public String toString() {
-        
-        return "NOMBRE: " + getName() + " NIVEL: " + getSummonerLevel();
+        return "Summoner [name=" + name + ", id=" + id + ", puuid=" + puuid + ", profileIconId=" + profileIconId
+                + ", summonerLevel=" + summonerLevel + "]";
     }
+
+    
      
 }
