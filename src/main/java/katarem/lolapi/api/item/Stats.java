@@ -8,717 +8,717 @@ public class Stats {
 
     @SerializedName("FlatHPPoolMod")
     @Expose
-    private Integer flatHPPoolMod;
+    private Double flatHPPoolMod;
     @SerializedName("rFlatHPModPerLevel")
     @Expose
-    private Integer rFlatHPModPerLevel;
+    private Double rFlatHPModPerLevel;
     @SerializedName("FlatMPPoolMod")
     @Expose
-    private Integer flatMPPoolMod;
+    private Double flatMPPoolMod;
     @SerializedName("rFlatMPModPerLevel")
     @Expose
-    private Integer rFlatMPModPerLevel;
+    private Double rFlatMPModPerLevel;
     @SerializedName("PercentHPPoolMod")
     @Expose
-    private Integer percentHPPoolMod;
+    private Double percentHPPoolMod;
     @SerializedName("PercentMPPoolMod")
     @Expose
-    private Integer percentMPPoolMod;
+    private Double percentMPPoolMod;
     @SerializedName("FlatHPRegenMod")
     @Expose
-    private Integer flatHPRegenMod;
+    private Double flatHPRegenMod;
     @SerializedName("rFlatHPRegenModPerLevel")
     @Expose
-    private Integer rFlatHPRegenModPerLevel;
+    private Double rFlatHPRegenModPerLevel;
     @SerializedName("PercentHPRegenMod")
     @Expose
-    private Integer percentHPRegenMod;
+    private Double percentHPRegenMod;
     @SerializedName("FlatMPRegenMod")
     @Expose
-    private Integer flatMPRegenMod;
+    private Double flatMPRegenMod;
     @SerializedName("rFlatMPRegenModPerLevel")
     @Expose
-    private Integer rFlatMPRegenModPerLevel;
+    private Double rFlatMPRegenModPerLevel;
     @SerializedName("PercentMPRegenMod")
     @Expose
-    private Integer percentMPRegenMod;
+    private Double percentMPRegenMod;
     @SerializedName("FlatArmorMod")
     @Expose
-    private Integer flatArmorMod;
+    private Double flatArmorMod;
     @SerializedName("rFlatArmorModPerLevel")
     @Expose
-    private Integer rFlatArmorModPerLevel;
+    private Double rFlatArmorModPerLevel;
     @SerializedName("PercentArmorMod")
     @Expose
-    private Integer percentArmorMod;
+    private Double percentArmorMod;
     @SerializedName("rFlatArmorPenetrationMod")
     @Expose
-    private Integer rFlatArmorPenetrationMod;
+    private Double rFlatArmorPenetrationMod;
     @SerializedName("rFlatArmorPenetrationModPerLevel")
     @Expose
-    private Integer rFlatArmorPenetrationModPerLevel;
+    private Double rFlatArmorPenetrationModPerLevel;
     @SerializedName("rPercentArmorPenetrationMod")
     @Expose
-    private Integer rPercentArmorPenetrationMod;
+    private Double rPercentArmorPenetrationMod;
     @SerializedName("rPercentArmorPenetrationModPerLevel")
     @Expose
-    private Integer rPercentArmorPenetrationModPerLevel;
+    private Double rPercentArmorPenetrationModPerLevel;
     @SerializedName("FlatPhysicalDamageMod")
     @Expose
-    private Integer flatPhysicalDamageMod;
+    private Double flatPhysicalDamageMod;
     @SerializedName("rFlatPhysicalDamageModPerLevel")
     @Expose
-    private Integer rFlatPhysicalDamageModPerLevel;
+    private Double rFlatPhysicalDamageModPerLevel;
     @SerializedName("PercentPhysicalDamageMod")
     @Expose
-    private Integer percentPhysicalDamageMod;
+    private Double percentPhysicalDamageMod;
     @SerializedName("FlatMagicDamageMod")
     @Expose
-    private Integer flatMagicDamageMod;
+    private Double flatMagicDamageMod;
     @SerializedName("rFlatMagicDamageModPerLevel")
     @Expose
-    private Integer rFlatMagicDamageModPerLevel;
+    private Double rFlatMagicDamageModPerLevel;
     @SerializedName("PercentMagicDamageMod")
     @Expose
-    private Integer percentMagicDamageMod;
+    private Double percentMagicDamageMod;
     @SerializedName("FlatMovementSpeedMod")
     @Expose
-    private Integer flatMovementSpeedMod;
+    private Double flatMovementSpeedMod;
     @SerializedName("rFlatMovementSpeedModPerLevel")
     @Expose
-    private Integer rFlatMovementSpeedModPerLevel;
+    private Double rFlatMovementSpeedModPerLevel;
     @SerializedName("PercentMovementSpeedMod")
     @Expose
-    private Integer percentMovementSpeedMod;
+    private Double percentMovementSpeedMod;
     @SerializedName("rPercentMovementSpeedModPerLevel")
     @Expose
-    private Integer rPercentMovementSpeedModPerLevel;
+    private Double rPercentMovementSpeedModPerLevel;
     @SerializedName("FlatAttackSpeedMod")
     @Expose
-    private Integer flatAttackSpeedMod;
+    private Double flatAttackSpeedMod;
     @SerializedName("PercentAttackSpeedMod")
     @Expose
-    private Integer percentAttackSpeedMod;
+    private Double percentAttackSpeedMod;
     @SerializedName("rPercentAttackSpeedModPerLevel")
     @Expose
-    private Integer rPercentAttackSpeedModPerLevel;
+    private Double rPercentAttackSpeedModPerLevel;
     @SerializedName("rFlatDodgeMod")
     @Expose
-    private Integer rFlatDodgeMod;
+    private Double rFlatDodgeMod;
     @SerializedName("rFlatDodgeModPerLevel")
     @Expose
-    private Integer rFlatDodgeModPerLevel;
+    private Double rFlatDodgeModPerLevel;
     @SerializedName("PercentDodgeMod")
     @Expose
-    private Integer percentDodgeMod;
+    private Double percentDodgeMod;
     @SerializedName("FlatCritChanceMod")
     @Expose
-    private Integer flatCritChanceMod;
+    private Double flatCritChanceMod;
     @SerializedName("rFlatCritChanceModPerLevel")
     @Expose
-    private Integer rFlatCritChanceModPerLevel;
+    private Double rFlatCritChanceModPerLevel;
     @SerializedName("PercentCritChanceMod")
     @Expose
-    private Integer percentCritChanceMod;
+    private Double percentCritChanceMod;
     @SerializedName("FlatCritDamageMod")
     @Expose
-    private Integer flatCritDamageMod;
+    private Double flatCritDamageMod;
     @SerializedName("rFlatCritDamageModPerLevel")
     @Expose
-    private Integer rFlatCritDamageModPerLevel;
+    private Double rFlatCritDamageModPerLevel;
     @SerializedName("PercentCritDamageMod")
     @Expose
-    private Integer percentCritDamageMod;
+    private Double percentCritDamageMod;
     @SerializedName("FlatBlockMod")
     @Expose
-    private Integer flatBlockMod;
+    private Double flatBlockMod;
     @SerializedName("PercentBlockMod")
     @Expose
-    private Integer percentBlockMod;
+    private Double percentBlockMod;
     @SerializedName("FlatSpellBlockMod")
     @Expose
-    private Integer flatSpellBlockMod;
+    private Double flatSpellBlockMod;
     @SerializedName("rFlatSpellBlockModPerLevel")
     @Expose
-    private Integer rFlatSpellBlockModPerLevel;
+    private Double rFlatSpellBlockModPerLevel;
     @SerializedName("PercentSpellBlockMod")
     @Expose
-    private Integer percentSpellBlockMod;
+    private Double percentSpellBlockMod;
     @SerializedName("FlatEXPBonus")
     @Expose
-    private Integer flatEXPBonus;
+    private Double flatEXPBonus;
     @SerializedName("PercentEXPBonus")
     @Expose
-    private Integer percentEXPBonus;
+    private Double percentEXPBonus;
     @SerializedName("rPercentCooldownMod")
     @Expose
-    private Integer rPercentCooldownMod;
+    private Double rPercentCooldownMod;
     @SerializedName("rPercentCooldownModPerLevel")
     @Expose
-    private Integer rPercentCooldownModPerLevel;
+    private Double rPercentCooldownModPerLevel;
     @SerializedName("rFlatTimeDeadMod")
     @Expose
-    private Integer rFlatTimeDeadMod;
+    private Double rFlatTimeDeadMod;
     @SerializedName("rFlatTimeDeadModPerLevel")
     @Expose
-    private Integer rFlatTimeDeadModPerLevel;
+    private Double rFlatTimeDeadModPerLevel;
     @SerializedName("rPercentTimeDeadMod")
     @Expose
-    private Integer rPercentTimeDeadMod;
+    private Double rPercentTimeDeadMod;
     @SerializedName("rPercentTimeDeadModPerLevel")
     @Expose
-    private Integer rPercentTimeDeadModPerLevel;
+    private Double rPercentTimeDeadModPerLevel;
     @SerializedName("rFlatGoldPer10Mod")
     @Expose
-    private Integer rFlatGoldPer10Mod;
+    private Double rFlatGoldPer10Mod;
     @SerializedName("rFlatMagicPenetrationMod")
     @Expose
-    private Integer rFlatMagicPenetrationMod;
+    private Double rFlatMagicPenetrationMod;
     @SerializedName("rFlatMagicPenetrationModPerLevel")
     @Expose
-    private Integer rFlatMagicPenetrationModPerLevel;
+    private Double rFlatMagicPenetrationModPerLevel;
     @SerializedName("rPercentMagicPenetrationMod")
     @Expose
-    private Integer rPercentMagicPenetrationMod;
+    private Double rPercentMagicPenetrationMod;
     @SerializedName("rPercentMagicPenetrationModPerLevel")
     @Expose
-    private Integer rPercentMagicPenetrationModPerLevel;
+    private Double rPercentMagicPenetrationModPerLevel;
     @SerializedName("FlatEnergyRegenMod")
     @Expose
-    private Integer flatEnergyRegenMod;
+    private Double flatEnergyRegenMod;
     @SerializedName("rFlatEnergyRegenModPerLevel")
     @Expose
-    private Integer rFlatEnergyRegenModPerLevel;
+    private Double rFlatEnergyRegenModPerLevel;
     @SerializedName("FlatEnergyPoolMod")
     @Expose
-    private Integer flatEnergyPoolMod;
+    private Double flatEnergyPoolMod;
     @SerializedName("rFlatEnergyModPerLevel")
     @Expose
-    private Integer rFlatEnergyModPerLevel;
+    private Double rFlatEnergyModPerLevel;
     @SerializedName("PercentLifeStealMod")
     @Expose
-    private Integer percentLifeStealMod;
+    private Double percentLifeStealMod;
     @SerializedName("PercentSpellVampMod")
     @Expose
-    private Integer percentSpellVampMod;
+    private Double percentSpellVampMod;
 
-    public Integer getFlatHPPoolMod() {
+    public Double getFlatHPPoolMod() {
         return flatHPPoolMod;
     }
 
-    public void setFlatHPPoolMod(Integer flatHPPoolMod) {
+    public void setFlatHPPoolMod(Double flatHPPoolMod) {
         this.flatHPPoolMod = flatHPPoolMod;
     }
 
-    public Integer getrFlatHPModPerLevel() {
+    public Double getrFlatHPModPerLevel() {
         return rFlatHPModPerLevel;
     }
 
-    public void setrFlatHPModPerLevel(Integer rFlatHPModPerLevel) {
+    public void setrFlatHPModPerLevel(Double rFlatHPModPerLevel) {
         this.rFlatHPModPerLevel = rFlatHPModPerLevel;
     }
 
-    public Integer getFlatMPPoolMod() {
+    public Double getFlatMPPoolMod() {
         return flatMPPoolMod;
     }
 
-    public void setFlatMPPoolMod(Integer flatMPPoolMod) {
+    public void setFlatMPPoolMod(Double flatMPPoolMod) {
         this.flatMPPoolMod = flatMPPoolMod;
     }
 
-    public Integer getrFlatMPModPerLevel() {
+    public Double getrFlatMPModPerLevel() {
         return rFlatMPModPerLevel;
     }
 
-    public void setrFlatMPModPerLevel(Integer rFlatMPModPerLevel) {
+    public void setrFlatMPModPerLevel(Double rFlatMPModPerLevel) {
         this.rFlatMPModPerLevel = rFlatMPModPerLevel;
     }
 
-    public Integer getPercentHPPoolMod() {
+    public Double getPercentHPPoolMod() {
         return percentHPPoolMod;
     }
 
-    public void setPercentHPPoolMod(Integer percentHPPoolMod) {
+    public void setPercentHPPoolMod(Double percentHPPoolMod) {
         this.percentHPPoolMod = percentHPPoolMod;
     }
 
-    public Integer getPercentMPPoolMod() {
+    public Double getPercentMPPoolMod() {
         return percentMPPoolMod;
     }
 
-    public void setPercentMPPoolMod(Integer percentMPPoolMod) {
+    public void setPercentMPPoolMod(Double percentMPPoolMod) {
         this.percentMPPoolMod = percentMPPoolMod;
     }
 
-    public Integer getFlatHPRegenMod() {
+    public Double getFlatHPRegenMod() {
         return flatHPRegenMod;
     }
 
-    public void setFlatHPRegenMod(Integer flatHPRegenMod) {
+    public void setFlatHPRegenMod(Double flatHPRegenMod) {
         this.flatHPRegenMod = flatHPRegenMod;
     }
 
-    public Integer getrFlatHPRegenModPerLevel() {
+    public Double getrFlatHPRegenModPerLevel() {
         return rFlatHPRegenModPerLevel;
     }
 
-    public void setrFlatHPRegenModPerLevel(Integer rFlatHPRegenModPerLevel) {
+    public void setrFlatHPRegenModPerLevel(Double rFlatHPRegenModPerLevel) {
         this.rFlatHPRegenModPerLevel = rFlatHPRegenModPerLevel;
     }
 
-    public Integer getPercentHPRegenMod() {
+    public Double getPercentHPRegenMod() {
         return percentHPRegenMod;
     }
 
-    public void setPercentHPRegenMod(Integer percentHPRegenMod) {
+    public void setPercentHPRegenMod(Double percentHPRegenMod) {
         this.percentHPRegenMod = percentHPRegenMod;
     }
 
-    public Integer getFlatMPRegenMod() {
+    public Double getFlatMPRegenMod() {
         return flatMPRegenMod;
     }
 
-    public void setFlatMPRegenMod(Integer flatMPRegenMod) {
+    public void setFlatMPRegenMod(Double flatMPRegenMod) {
         this.flatMPRegenMod = flatMPRegenMod;
     }
 
-    public Integer getrFlatMPRegenModPerLevel() {
+    public Double getrFlatMPRegenModPerLevel() {
         return rFlatMPRegenModPerLevel;
     }
 
-    public void setrFlatMPRegenModPerLevel(Integer rFlatMPRegenModPerLevel) {
+    public void setrFlatMPRegenModPerLevel(Double rFlatMPRegenModPerLevel) {
         this.rFlatMPRegenModPerLevel = rFlatMPRegenModPerLevel;
     }
 
-    public Integer getPercentMPRegenMod() {
+    public Double getPercentMPRegenMod() {
         return percentMPRegenMod;
     }
 
-    public void setPercentMPRegenMod(Integer percentMPRegenMod) {
+    public void setPercentMPRegenMod(Double percentMPRegenMod) {
         this.percentMPRegenMod = percentMPRegenMod;
     }
 
-    public Integer getFlatArmorMod() {
+    public Double getFlatArmorMod() {
         return flatArmorMod;
     }
 
-    public void setFlatArmorMod(Integer flatArmorMod) {
+    public void setFlatArmorMod(Double flatArmorMod) {
         this.flatArmorMod = flatArmorMod;
     }
 
-    public Integer getrFlatArmorModPerLevel() {
+    public Double getrFlatArmorModPerLevel() {
         return rFlatArmorModPerLevel;
     }
 
-    public void setrFlatArmorModPerLevel(Integer rFlatArmorModPerLevel) {
+    public void setrFlatArmorModPerLevel(Double rFlatArmorModPerLevel) {
         this.rFlatArmorModPerLevel = rFlatArmorModPerLevel;
     }
 
-    public Integer getPercentArmorMod() {
+    public Double getPercentArmorMod() {
         return percentArmorMod;
     }
 
-    public void setPercentArmorMod(Integer percentArmorMod) {
+    public void setPercentArmorMod(Double percentArmorMod) {
         this.percentArmorMod = percentArmorMod;
     }
 
-    public Integer getrFlatArmorPenetrationMod() {
+    public Double getrFlatArmorPenetrationMod() {
         return rFlatArmorPenetrationMod;
     }
 
-    public void setrFlatArmorPenetrationMod(Integer rFlatArmorPenetrationMod) {
+    public void setrFlatArmorPenetrationMod(Double rFlatArmorPenetrationMod) {
         this.rFlatArmorPenetrationMod = rFlatArmorPenetrationMod;
     }
 
-    public Integer getrFlatArmorPenetrationModPerLevel() {
+    public Double getrFlatArmorPenetrationModPerLevel() {
         return rFlatArmorPenetrationModPerLevel;
     }
 
-    public void setrFlatArmorPenetrationModPerLevel(Integer rFlatArmorPenetrationModPerLevel) {
+    public void setrFlatArmorPenetrationModPerLevel(Double rFlatArmorPenetrationModPerLevel) {
         this.rFlatArmorPenetrationModPerLevel = rFlatArmorPenetrationModPerLevel;
     }
 
-    public Integer getrPercentArmorPenetrationMod() {
+    public Double getrPercentArmorPenetrationMod() {
         return rPercentArmorPenetrationMod;
     }
 
-    public void setrPercentArmorPenetrationMod(Integer rPercentArmorPenetrationMod) {
+    public void setrPercentArmorPenetrationMod(Double rPercentArmorPenetrationMod) {
         this.rPercentArmorPenetrationMod = rPercentArmorPenetrationMod;
     }
 
-    public Integer getrPercentArmorPenetrationModPerLevel() {
+    public Double getrPercentArmorPenetrationModPerLevel() {
         return rPercentArmorPenetrationModPerLevel;
     }
 
-    public void setrPercentArmorPenetrationModPerLevel(Integer rPercentArmorPenetrationModPerLevel) {
+    public void setrPercentArmorPenetrationModPerLevel(Double rPercentArmorPenetrationModPerLevel) {
         this.rPercentArmorPenetrationModPerLevel = rPercentArmorPenetrationModPerLevel;
     }
 
-    public Integer getFlatPhysicalDamageMod() {
+    public Double getFlatPhysicalDamageMod() {
         return flatPhysicalDamageMod;
     }
 
-    public void setFlatPhysicalDamageMod(Integer flatPhysicalDamageMod) {
+    public void setFlatPhysicalDamageMod(Double flatPhysicalDamageMod) {
         this.flatPhysicalDamageMod = flatPhysicalDamageMod;
     }
 
-    public Integer getrFlatPhysicalDamageModPerLevel() {
+    public Double getrFlatPhysicalDamageModPerLevel() {
         return rFlatPhysicalDamageModPerLevel;
     }
 
-    public void setrFlatPhysicalDamageModPerLevel(Integer rFlatPhysicalDamageModPerLevel) {
+    public void setrFlatPhysicalDamageModPerLevel(Double rFlatPhysicalDamageModPerLevel) {
         this.rFlatPhysicalDamageModPerLevel = rFlatPhysicalDamageModPerLevel;
     }
 
-    public Integer getPercentPhysicalDamageMod() {
+    public Double getPercentPhysicalDamageMod() {
         return percentPhysicalDamageMod;
     }
 
-    public void setPercentPhysicalDamageMod(Integer percentPhysicalDamageMod) {
+    public void setPercentPhysicalDamageMod(Double percentPhysicalDamageMod) {
         this.percentPhysicalDamageMod = percentPhysicalDamageMod;
     }
 
-    public Integer getFlatMagicDamageMod() {
+    public Double getFlatMagicDamageMod() {
         return flatMagicDamageMod;
     }
 
-    public void setFlatMagicDamageMod(Integer flatMagicDamageMod) {
+    public void setFlatMagicDamageMod(Double flatMagicDamageMod) {
         this.flatMagicDamageMod = flatMagicDamageMod;
     }
 
-    public Integer getrFlatMagicDamageModPerLevel() {
+    public Double getrFlatMagicDamageModPerLevel() {
         return rFlatMagicDamageModPerLevel;
     }
 
-    public void setrFlatMagicDamageModPerLevel(Integer rFlatMagicDamageModPerLevel) {
+    public void setrFlatMagicDamageModPerLevel(Double rFlatMagicDamageModPerLevel) {
         this.rFlatMagicDamageModPerLevel = rFlatMagicDamageModPerLevel;
     }
 
-    public Integer getPercentMagicDamageMod() {
+    public Double getPercentMagicDamageMod() {
         return percentMagicDamageMod;
     }
 
-    public void setPercentMagicDamageMod(Integer percentMagicDamageMod) {
+    public void setPercentMagicDamageMod(Double percentMagicDamageMod) {
         this.percentMagicDamageMod = percentMagicDamageMod;
     }
 
-    public Integer getFlatMovementSpeedMod() {
+    public Double getFlatMovementSpeedMod() {
         return flatMovementSpeedMod;
     }
 
-    public void setFlatMovementSpeedMod(Integer flatMovementSpeedMod) {
+    public void setFlatMovementSpeedMod(Double flatMovementSpeedMod) {
         this.flatMovementSpeedMod = flatMovementSpeedMod;
     }
 
-    public Integer getrFlatMovementSpeedModPerLevel() {
+    public Double getrFlatMovementSpeedModPerLevel() {
         return rFlatMovementSpeedModPerLevel;
     }
 
-    public void setrFlatMovementSpeedModPerLevel(Integer rFlatMovementSpeedModPerLevel) {
+    public void setrFlatMovementSpeedModPerLevel(Double rFlatMovementSpeedModPerLevel) {
         this.rFlatMovementSpeedModPerLevel = rFlatMovementSpeedModPerLevel;
     }
 
-    public Integer getPercentMovementSpeedMod() {
+    public Double getPercentMovementSpeedMod() {
         return percentMovementSpeedMod;
     }
 
-    public void setPercentMovementSpeedMod(Integer percentMovementSpeedMod) {
+    public void setPercentMovementSpeedMod(Double percentMovementSpeedMod) {
         this.percentMovementSpeedMod = percentMovementSpeedMod;
     }
 
-    public Integer getrPercentMovementSpeedModPerLevel() {
+    public Double getrPercentMovementSpeedModPerLevel() {
         return rPercentMovementSpeedModPerLevel;
     }
 
-    public void setrPercentMovementSpeedModPerLevel(Integer rPercentMovementSpeedModPerLevel) {
+    public void setrPercentMovementSpeedModPerLevel(Double rPercentMovementSpeedModPerLevel) {
         this.rPercentMovementSpeedModPerLevel = rPercentMovementSpeedModPerLevel;
     }
 
-    public Integer getFlatAttackSpeedMod() {
+    public Double getFlatAttackSpeedMod() {
         return flatAttackSpeedMod;
     }
 
-    public void setFlatAttackSpeedMod(Integer flatAttackSpeedMod) {
+    public void setFlatAttackSpeedMod(Double flatAttackSpeedMod) {
         this.flatAttackSpeedMod = flatAttackSpeedMod;
     }
 
-    public Integer getPercentAttackSpeedMod() {
+    public Double getPercentAttackSpeedMod() {
         return percentAttackSpeedMod;
     }
 
-    public void setPercentAttackSpeedMod(Integer percentAttackSpeedMod) {
+    public void setPercentAttackSpeedMod(Double percentAttackSpeedMod) {
         this.percentAttackSpeedMod = percentAttackSpeedMod;
     }
 
-    public Integer getrPercentAttackSpeedModPerLevel() {
+    public Double getrPercentAttackSpeedModPerLevel() {
         return rPercentAttackSpeedModPerLevel;
     }
 
-    public void setrPercentAttackSpeedModPerLevel(Integer rPercentAttackSpeedModPerLevel) {
+    public void setrPercentAttackSpeedModPerLevel(Double rPercentAttackSpeedModPerLevel) {
         this.rPercentAttackSpeedModPerLevel = rPercentAttackSpeedModPerLevel;
     }
 
-    public Integer getrFlatDodgeMod() {
+    public Double getrFlatDodgeMod() {
         return rFlatDodgeMod;
     }
 
-    public void setrFlatDodgeMod(Integer rFlatDodgeMod) {
+    public void setrFlatDodgeMod(Double rFlatDodgeMod) {
         this.rFlatDodgeMod = rFlatDodgeMod;
     }
 
-    public Integer getrFlatDodgeModPerLevel() {
+    public Double getrFlatDodgeModPerLevel() {
         return rFlatDodgeModPerLevel;
     }
 
-    public void setrFlatDodgeModPerLevel(Integer rFlatDodgeModPerLevel) {
+    public void setrFlatDodgeModPerLevel(Double rFlatDodgeModPerLevel) {
         this.rFlatDodgeModPerLevel = rFlatDodgeModPerLevel;
     }
 
-    public Integer getPercentDodgeMod() {
+    public Double getPercentDodgeMod() {
         return percentDodgeMod;
     }
 
-    public void setPercentDodgeMod(Integer percentDodgeMod) {
+    public void setPercentDodgeMod(Double percentDodgeMod) {
         this.percentDodgeMod = percentDodgeMod;
     }
 
-    public Integer getFlatCritChanceMod() {
+    public Double getFlatCritChanceMod() {
         return flatCritChanceMod;
     }
 
-    public void setFlatCritChanceMod(Integer flatCritChanceMod) {
+    public void setFlatCritChanceMod(Double flatCritChanceMod) {
         this.flatCritChanceMod = flatCritChanceMod;
     }
 
-    public Integer getrFlatCritChanceModPerLevel() {
+    public Double getrFlatCritChanceModPerLevel() {
         return rFlatCritChanceModPerLevel;
     }
 
-    public void setrFlatCritChanceModPerLevel(Integer rFlatCritChanceModPerLevel) {
+    public void setrFlatCritChanceModPerLevel(Double rFlatCritChanceModPerLevel) {
         this.rFlatCritChanceModPerLevel = rFlatCritChanceModPerLevel;
     }
 
-    public Integer getPercentCritChanceMod() {
+    public Double getPercentCritChanceMod() {
         return percentCritChanceMod;
     }
 
-    public void setPercentCritChanceMod(Integer percentCritChanceMod) {
+    public void setPercentCritChanceMod(Double percentCritChanceMod) {
         this.percentCritChanceMod = percentCritChanceMod;
     }
 
-    public Integer getFlatCritDamageMod() {
+    public Double getFlatCritDamageMod() {
         return flatCritDamageMod;
     }
 
-    public void setFlatCritDamageMod(Integer flatCritDamageMod) {
+    public void setFlatCritDamageMod(Double flatCritDamageMod) {
         this.flatCritDamageMod = flatCritDamageMod;
     }
 
-    public Integer getrFlatCritDamageModPerLevel() {
+    public Double getrFlatCritDamageModPerLevel() {
         return rFlatCritDamageModPerLevel;
     }
 
-    public void setrFlatCritDamageModPerLevel(Integer rFlatCritDamageModPerLevel) {
+    public void setrFlatCritDamageModPerLevel(Double rFlatCritDamageModPerLevel) {
         this.rFlatCritDamageModPerLevel = rFlatCritDamageModPerLevel;
     }
 
-    public Integer getPercentCritDamageMod() {
+    public Double getPercentCritDamageMod() {
         return percentCritDamageMod;
     }
 
-    public void setPercentCritDamageMod(Integer percentCritDamageMod) {
+    public void setPercentCritDamageMod(Double percentCritDamageMod) {
         this.percentCritDamageMod = percentCritDamageMod;
     }
 
-    public Integer getFlatBlockMod() {
+    public Double getFlatBlockMod() {
         return flatBlockMod;
     }
 
-    public void setFlatBlockMod(Integer flatBlockMod) {
+    public void setFlatBlockMod(Double flatBlockMod) {
         this.flatBlockMod = flatBlockMod;
     }
 
-    public Integer getPercentBlockMod() {
+    public Double getPercentBlockMod() {
         return percentBlockMod;
     }
 
-    public void setPercentBlockMod(Integer percentBlockMod) {
+    public void setPercentBlockMod(Double percentBlockMod) {
         this.percentBlockMod = percentBlockMod;
     }
 
-    public Integer getFlatSpellBlockMod() {
+    public Double getFlatSpellBlockMod() {
         return flatSpellBlockMod;
     }
 
-    public void setFlatSpellBlockMod(Integer flatSpellBlockMod) {
+    public void setFlatSpellBlockMod(Double flatSpellBlockMod) {
         this.flatSpellBlockMod = flatSpellBlockMod;
     }
 
-    public Integer getrFlatSpellBlockModPerLevel() {
+    public Double getrFlatSpellBlockModPerLevel() {
         return rFlatSpellBlockModPerLevel;
     }
 
-    public void setrFlatSpellBlockModPerLevel(Integer rFlatSpellBlockModPerLevel) {
+    public void setrFlatSpellBlockModPerLevel(Double rFlatSpellBlockModPerLevel) {
         this.rFlatSpellBlockModPerLevel = rFlatSpellBlockModPerLevel;
     }
 
-    public Integer getPercentSpellBlockMod() {
+    public Double getPercentSpellBlockMod() {
         return percentSpellBlockMod;
     }
 
-    public void setPercentSpellBlockMod(Integer percentSpellBlockMod) {
+    public void setPercentSpellBlockMod(Double percentSpellBlockMod) {
         this.percentSpellBlockMod = percentSpellBlockMod;
     }
 
-    public Integer getFlatEXPBonus() {
+    public Double getFlatEXPBonus() {
         return flatEXPBonus;
     }
 
-    public void setFlatEXPBonus(Integer flatEXPBonus) {
+    public void setFlatEXPBonus(Double flatEXPBonus) {
         this.flatEXPBonus = flatEXPBonus;
     }
 
-    public Integer getPercentEXPBonus() {
+    public Double getPercentEXPBonus() {
         return percentEXPBonus;
     }
 
-    public void setPercentEXPBonus(Integer percentEXPBonus) {
+    public void setPercentEXPBonus(Double percentEXPBonus) {
         this.percentEXPBonus = percentEXPBonus;
     }
 
-    public Integer getrPercentCooldownMod() {
+    public Double getrPercentCooldownMod() {
         return rPercentCooldownMod;
     }
 
-    public void setrPercentCooldownMod(Integer rPercentCooldownMod) {
+    public void setrPercentCooldownMod(Double rPercentCooldownMod) {
         this.rPercentCooldownMod = rPercentCooldownMod;
     }
 
-    public Integer getrPercentCooldownModPerLevel() {
+    public Double getrPercentCooldownModPerLevel() {
         return rPercentCooldownModPerLevel;
     }
 
-    public void setrPercentCooldownModPerLevel(Integer rPercentCooldownModPerLevel) {
+    public void setrPercentCooldownModPerLevel(Double rPercentCooldownModPerLevel) {
         this.rPercentCooldownModPerLevel = rPercentCooldownModPerLevel;
     }
 
-    public Integer getrFlatTimeDeadMod() {
+    public Double getrFlatTimeDeadMod() {
         return rFlatTimeDeadMod;
     }
 
-    public void setrFlatTimeDeadMod(Integer rFlatTimeDeadMod) {
+    public void setrFlatTimeDeadMod(Double rFlatTimeDeadMod) {
         this.rFlatTimeDeadMod = rFlatTimeDeadMod;
     }
 
-    public Integer getrFlatTimeDeadModPerLevel() {
+    public Double getrFlatTimeDeadModPerLevel() {
         return rFlatTimeDeadModPerLevel;
     }
 
-    public void setrFlatTimeDeadModPerLevel(Integer rFlatTimeDeadModPerLevel) {
+    public void setrFlatTimeDeadModPerLevel(Double rFlatTimeDeadModPerLevel) {
         this.rFlatTimeDeadModPerLevel = rFlatTimeDeadModPerLevel;
     }
 
-    public Integer getrPercentTimeDeadMod() {
+    public Double getrPercentTimeDeadMod() {
         return rPercentTimeDeadMod;
     }
 
-    public void setrPercentTimeDeadMod(Integer rPercentTimeDeadMod) {
+    public void setrPercentTimeDeadMod(Double rPercentTimeDeadMod) {
         this.rPercentTimeDeadMod = rPercentTimeDeadMod;
     }
 
-    public Integer getrPercentTimeDeadModPerLevel() {
+    public Double getrPercentTimeDeadModPerLevel() {
         return rPercentTimeDeadModPerLevel;
     }
 
-    public void setrPercentTimeDeadModPerLevel(Integer rPercentTimeDeadModPerLevel) {
+    public void setrPercentTimeDeadModPerLevel(Double rPercentTimeDeadModPerLevel) {
         this.rPercentTimeDeadModPerLevel = rPercentTimeDeadModPerLevel;
     }
 
-    public Integer getrFlatGoldPer10Mod() {
+    public Double getrFlatGoldPer10Mod() {
         return rFlatGoldPer10Mod;
     }
 
-    public void setrFlatGoldPer10Mod(Integer rFlatGoldPer10Mod) {
+    public void setrFlatGoldPer10Mod(Double rFlatGoldPer10Mod) {
         this.rFlatGoldPer10Mod = rFlatGoldPer10Mod;
     }
 
-    public Integer getrFlatMagicPenetrationMod() {
+    public Double getrFlatMagicPenetrationMod() {
         return rFlatMagicPenetrationMod;
     }
 
-    public void setrFlatMagicPenetrationMod(Integer rFlatMagicPenetrationMod) {
+    public void setrFlatMagicPenetrationMod(Double rFlatMagicPenetrationMod) {
         this.rFlatMagicPenetrationMod = rFlatMagicPenetrationMod;
     }
 
-    public Integer getrFlatMagicPenetrationModPerLevel() {
+    public Double getrFlatMagicPenetrationModPerLevel() {
         return rFlatMagicPenetrationModPerLevel;
     }
 
-    public void setrFlatMagicPenetrationModPerLevel(Integer rFlatMagicPenetrationModPerLevel) {
+    public void setrFlatMagicPenetrationModPerLevel(Double rFlatMagicPenetrationModPerLevel) {
         this.rFlatMagicPenetrationModPerLevel = rFlatMagicPenetrationModPerLevel;
     }
 
-    public Integer getrPercentMagicPenetrationMod() {
+    public Double getrPercentMagicPenetrationMod() {
         return rPercentMagicPenetrationMod;
     }
 
-    public void setrPercentMagicPenetrationMod(Integer rPercentMagicPenetrationMod) {
+    public void setrPercentMagicPenetrationMod(Double rPercentMagicPenetrationMod) {
         this.rPercentMagicPenetrationMod = rPercentMagicPenetrationMod;
     }
 
-    public Integer getrPercentMagicPenetrationModPerLevel() {
+    public Double getrPercentMagicPenetrationModPerLevel() {
         return rPercentMagicPenetrationModPerLevel;
     }
 
-    public void setrPercentMagicPenetrationModPerLevel(Integer rPercentMagicPenetrationModPerLevel) {
+    public void setrPercentMagicPenetrationModPerLevel(Double rPercentMagicPenetrationModPerLevel) {
         this.rPercentMagicPenetrationModPerLevel = rPercentMagicPenetrationModPerLevel;
     }
 
-    public Integer getFlatEnergyRegenMod() {
+    public Double getFlatEnergyRegenMod() {
         return flatEnergyRegenMod;
     }
 
-    public void setFlatEnergyRegenMod(Integer flatEnergyRegenMod) {
+    public void setFlatEnergyRegenMod(Double flatEnergyRegenMod) {
         this.flatEnergyRegenMod = flatEnergyRegenMod;
     }
 
-    public Integer getrFlatEnergyRegenModPerLevel() {
+    public Double getrFlatEnergyRegenModPerLevel() {
         return rFlatEnergyRegenModPerLevel;
     }
 
-    public void setrFlatEnergyRegenModPerLevel(Integer rFlatEnergyRegenModPerLevel) {
+    public void setrFlatEnergyRegenModPerLevel(Double rFlatEnergyRegenModPerLevel) {
         this.rFlatEnergyRegenModPerLevel = rFlatEnergyRegenModPerLevel;
     }
 
-    public Integer getFlatEnergyPoolMod() {
+    public Double getFlatEnergyPoolMod() {
         return flatEnergyPoolMod;
     }
 
-    public void setFlatEnergyPoolMod(Integer flatEnergyPoolMod) {
+    public void setFlatEnergyPoolMod(Double flatEnergyPoolMod) {
         this.flatEnergyPoolMod = flatEnergyPoolMod;
     }
 
-    public Integer getrFlatEnergyModPerLevel() {
+    public Double getrFlatEnergyModPerLevel() {
         return rFlatEnergyModPerLevel;
     }
 
-    public void setrFlatEnergyModPerLevel(Integer rFlatEnergyModPerLevel) {
+    public void setrFlatEnergyModPerLevel(Double rFlatEnergyModPerLevel) {
         this.rFlatEnergyModPerLevel = rFlatEnergyModPerLevel;
     }
 
-    public Integer getPercentLifeStealMod() {
+    public Double getPercentLifeStealMod() {
         return percentLifeStealMod;
     }
 
-    public void setPercentLifeStealMod(Integer percentLifeStealMod) {
+    public void setPercentLifeStealMod(Double percentLifeStealMod) {
         this.percentLifeStealMod = percentLifeStealMod;
     }
 
-    public Integer getPercentSpellVampMod() {
+    public Double getPercentSpellVampMod() {
         return percentSpellVampMod;
     }
 
-    public void setPercentSpellVampMod(Integer percentSpellVampMod) {
+    public void setPercentSpellVampMod(Double percentSpellVampMod) {
         this.percentSpellVampMod = percentSpellVampMod;
     }
 

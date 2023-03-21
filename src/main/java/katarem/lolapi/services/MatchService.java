@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import com.google.gson.Gson;
 
 import katarem.lolapi.api.game.GameInfo;
+import katarem.lolapi.constants.Region;
 import katarem.lolapi.api.Summoner;
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
@@ -24,10 +25,10 @@ public class MatchService {
     private Gson gson = new Gson();
     private LoLInterface service;
     private String API_KEY;
-    public MatchService(String API_KEY, String region){
+    public MatchService(String API_KEY, Region region){
 
         //Adapting the url to the region
-        BASE_URL = String.format("https://%S.api.riotgames.com/lol/", region);
+        BASE_URL = String.format("https://%S.api.riotgames.com/lol/", region.server);
 
         this.API_KEY = API_KEY;
 

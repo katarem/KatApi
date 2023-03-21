@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 
 import katarem.lolapi.api.item.ItemData;
 import katarem.lolapi.api.mastery.ChampionData;
+import katarem.lolapi.constants.Langs;
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
 import retrofit2.Response;
@@ -51,18 +52,18 @@ public class LoLService {
         return versions.get(0);
     }
 
-    public ChampionData getChampionsData(String version, String lang) throws Exception{
+    public ChampionData getChampionsData(String version, Langs lang) throws Exception{
         Response<ChampionData> response = service
-                .getChampionsData(version,lang)
+                .getChampionsData(version,lang.lang)
                 .execute();
         assertResponse(response);
         ChampionData champions = response.body();
         return champions;
     }
 
-    public ItemData getItemsData(String version, String lang) throws Exception{
+    public ItemData getItemsData(String version, Langs lang) throws Exception{
         Response<ItemData> response = service
-                .getItemsData(version, lang)
+                .getItemsData(version, lang.lang)
                 .execute();
         assertResponse(response);
         ItemData items = response.body();

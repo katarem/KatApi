@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import katarem.lolapi.api.game.LeagueEntry;
 import katarem.lolapi.api.mastery.Mastery;
+import katarem.lolapi.constants.Platform;
 import katarem.lolapi.api.Summoner;
 import retrofit2.Response;
 
@@ -22,14 +23,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class SummonerService {
     
-    private String BASE_URL = "https://euw1.api.riotgames.com/lol/";
+    private String BASE_URL = "";
     private LoLInterface service;
     private String API_KEY;
     
 
-    public SummonerService(String API_KEY, String region){
+    public SummonerService(String API_KEY, Platform platform){
         //Adapting the URL to the region
-        BASE_URL = String.format("https://%s.api.riotgames.com/lol/", region);
+        BASE_URL = String.format("https://%s.api.riotgames.com/lol/", platform.server);
         this.API_KEY = API_KEY;
 
         //Creating the service
