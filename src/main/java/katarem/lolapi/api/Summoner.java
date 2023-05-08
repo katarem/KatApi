@@ -3,7 +3,6 @@ package katarem.lolapi.api;
 import katarem.lolapi.api.game.LeagueEntry;
 import katarem.lolapi.constants.Queue;
 import katarem.lolapi.services.LoLService;
-import katarem.lolapi.services.SummonerService;
 
 /***
  * JavaBean to get the Summoner data
@@ -14,34 +13,43 @@ public class Summoner {
     String puuid;
     String profileIconId;
     String summonerLevel;
-    
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getPuuid() {
         return puuid;
     }
+
     public void setPuuid(String puuid) {
         this.puuid = puuid;
     }
+
     public String getProfileIconId() {
         return profileIconId;
     }
+
     public void setProfileIconId(String profileIconId) {
         this.profileIconId = profileIconId;
     }
+
     public String getSummonerLevel() {
         return summonerLevel;
     }
+
     public void setSummonerLevel(String summonerLevel) {
         this.summonerLevel = summonerLevel;
     }
+
     public String getId() {
         return id;
     }
+
     public void setId(String id) {
         this.id = id;
     }
@@ -52,6 +60,4 @@ public class Summoner {
                 + ", summonerLevel=" + summonerLevel + "]";
     }
 
-    
-     
 }
