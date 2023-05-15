@@ -17,7 +17,6 @@ import katarem.katapi.constants.Region;
 import katarem.katapi.services.*;
 
 public class Example {
-    static Integer wins = 0;
 
     public static void main(String[] args) throws Exception {
 

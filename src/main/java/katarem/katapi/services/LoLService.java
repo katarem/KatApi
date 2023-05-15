@@ -6,8 +6,6 @@ import java.util.Collection;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
-import javax.swing.text.html.Option;
-
 import com.google.gson.Gson;
 
 import katarem.katapi.api.Summoner;
@@ -43,14 +41,9 @@ public class LoLService {
     public static class Builder {
         private String version;
         private String lang;
-        private String API_KEY;
         private Summoner summoner;
         private Platform platform;
         private Region region;
-
-        public Builder() {
-            API_KEY = LoLService.API_KEY;
-        }
 
         public Builder setVersion(String version) {
             this.version = version;
