@@ -1,0 +1,111 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/elson/.m2/repository/com/squareup/retrofit2/retrofit/2.9.0/retrofit-2.9.0.jar;C:/Users/elson/.m2/repository/com/squareup/okhttp3/okhttp/3.14.9/okhttp-3.14.9.jar;C:/Users/elson/.m2/repository/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar;C:/Users/elson/.m2/repository/com/squareup/retrofit2/converter-gson/2.9.0/converter-gson-2.9.0.jar;C:/Users/elson/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'15'
+-sourcepath
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java;C:/Users/elson/Documents/Github/LoLApps/KatApi/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'KatApi 1.0.0 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/15/docs/api' 'C:/Users/elson/Documents/Github/LoLApps/KatApi/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'KatApi 1.0.0 API'
+io.github.katarem.katapi.api.game
+io.github.katarem.katapi.api.item
+io.github.katarem.katapi.api.mastery
+io.github.katarem.katapi.api.spectator
+io.github.katarem.katapi.api
+io.github.katarem.katapi.constants
+io.github.katarem.katapi
+io.github.katarem.katapi.services
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Ban.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Baron.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Challenges.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Champion.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Dragon.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/GameInfo.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Info.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Inhibitor.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/LeagueEntry.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Metadata.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Objectives.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Participant.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Perks.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/RiftHerald.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Selection.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/StatPerks.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Style.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Team.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/game/Tower.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/Basic.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/Effect.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/Gold.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/Image.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/Item.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/ItemData.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/Rune.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/item/Stats.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/mastery/Champion.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/mastery/ChampionData.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/mastery/Image.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/mastery/Info.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/mastery/Mastery.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/mastery/Stats.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/spectator/CurrentGame.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/spectator/Observers.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/spectator/Participant.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/spectator/Perks.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/api/Summoner.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/constants/Langs.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/constants/Platform.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/constants/Queue.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/constants/Region.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/Example.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/services/ErrorMessage.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/services/LoLInterface.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/services/LoLService.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/services/MatchService.java'
+'C:/Users/elson/Documents/Github/LoLApps/KatApi/src/main/java/io/github/katarem/katapi/services/SummonerService.java'
+C:\Users\elson\.m2\repository\com\squareup\retrofit2\retrofit\2.9.0\retrofit-2.9.0.jar = 1681503452153
+C:\Users\elson\.m2\repository\com\squareup\okhttp3\okhttp\3.14.9\okhttp-3.14.9.jar = 1681503452240
+C:\Users\elson\.m2\repository\com\squareup\okio\okio\1.17.2\okio-1.17.2.jar = 1681503452306
+C:\Users\elson\.m2\repository\com\squareup\retrofit2\converter-gson\2.9.0\converter-gson-2.9.0.jar = 1681503452308
+C:\Users\elson\.m2\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar = 1681503452363
+C:\Users\elson\Documents\Github\LoLApps\KatApi\src\main\java = 1684177836585
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\generated-sources\annotations = 1684181347559
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\allclasses-index.html = 1684181354593
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\allpackages-index.html = 1684181354596
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\copy.svg = 1684181354741
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\element-list = 1684181354116
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\help-doc.html = 1684181354725
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\index-all.html = 1684181354706
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\index.html = 1684181354499
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\member-search-index.js = 1684181354613
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\module-search-index.js = 1684181354599
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\overview-summary.html = 1684181354711
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\overview-tree.html = 1684181354495
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\package-search-index.js = 1684181354600
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\script.js = 1684181354739
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\search-page.js = 1684181354746
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\search.html = 1684181354708
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\search.js = 1684181354744
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\stylesheet.css = 1684181354732
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\tag-search-index.js = 1684181354619
+C:\Users\elson\Documents\Github\LoLApps\KatApi\target\apidocs\type-search-index.js = 1684181354601
