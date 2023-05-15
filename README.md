@@ -11,11 +11,11 @@
 - [Cómo contribuir](about:blank#c%C3%B3mo-contribuir)
 - [Autor](about:blank#autores)
 
-[https://img.shields.io/badge/retrofit-2-red](https://img.shields.io/badge/retrofit-2-red)
+![https://img.shields.io/badge/retrofit-2-red](https://img.shields.io/badge/retrofit-2-red)
 
-[https://img.shields.io/badge/maven-central-blue](https://img.shields.io/badge/maven-central-blue)
+![https://img.shields.io/badge/maven-central-blue](https://img.shields.io/badge/maven-central-blue)
 
-[https://img.shields.io/badge/java-15-yellow](https://img.shields.io/badge/java-15-yellow)
+![https://img.shields.io/badge/java-15-yellow](https://img.shields.io/badge/java-15-yellow)
 
 ## What is KatApi
 
