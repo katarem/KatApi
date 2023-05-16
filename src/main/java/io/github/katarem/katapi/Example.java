@@ -33,8 +33,8 @@ public class Example {
                 .setPlatform(Platform.EUROPE_WEST)
                 .setRegion(Region.EUROPE)
                 .setLang(Langs.ENGLISH_UK)
-                .setVersion("13.9.1")
-                .forSummoner("SHAC0 CLONE")
+                .setVersion("VERSION")
+                .forSummoner("SUMMONERNAME")
                 .build();
 
         Summoner summoner = service.getSummoner();

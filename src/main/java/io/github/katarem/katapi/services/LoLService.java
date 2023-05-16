@@ -26,6 +26,13 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/***
+ * Service to get the different calls you have from the API.
+ * 
+ * @author katarem
+ * @version 1.0 16th may 2023
+ */
+
 public class LoLService {
 
     private Gson gson = new Gson();
@@ -45,27 +52,62 @@ public class LoLService {
         private Platform platform;
         private Region region;
 
+        /***
+         * Set game target version. If you don't know which version is the last, you can
+         * use the getLastVersion when the object is built.
+         * 
+         * @param version
+         */
         public Builder setVersion(String version) {
             this.version = version;
             return this;
         }
 
+        /**
+         * Set the language used for the received data. All of them are available on
+         * {@link Langs}
+         * 
+         * @param lang
+         */
         public Builder setLang(Langs lang) {
             this.lang = lang.lang;
             return this;
         }
 
+        /***
+         * Set the platform used for the search. All platforms are available on
+         * {@link Platform}
+         * 
+         * @param platform
+         */
         public Builder setPlatform(Platform platform) {
             this.platform = platform;
             return this;
         }
 
+        /***
+         * Set the desired game region to use. All regions are available on
+         * {@link Region}
+         * 
+         * @param region
+         * @return
+         */
         public Builder setRegion(Region region) {
             this.region = region;
             return this;
         }
 
-        public Builder forSummoner(String summName) throws IOException {
+        /**
+         * Sets up the service to point at a summoner. It needs to have a selected
+         * {@link Platform}
+         * BEFORE calling this part of the builder.
+         * 
+         * @param summName - Summoner Name
+         * @throws Exception
+         */
+        public Builder forSummoner(String summName) throws Exception {
+            if (platform == null)
+                throw new Exception("You have to set up the platform before!");
             summoner = new SummonerService.Builder(LoLService.API_KEY)
                     .setPlatform(platform)
                     .build()
@@ -73,11 +115,12 @@ public class LoLService {
             return this;
         }
 
+        /**
+         * Builds the service for its use.
+         * 
+         * @throws IOException
+         */
         public LoLService build() throws IOException {
-            if (lang == null)
-                throw new NullPointerException();
-            else if (version == null)
-                throw new NullPointerException();
             LoLService l = new LoLService(this);
             return l;
         }
@@ -97,21 +140,37 @@ public class LoLService {
                 .build();
         service = retrofit.create(LoLInterface.class);
 
-        lang = builder.lang;
-        version = builder.version;
-        summoner = builder.summoner;
-        region = builder.region;
-        platform = builder.platform;
+        if (builder.lang != null)
+            lang = builder.lang;
+        if (builder.version != null)
+            version = builder.version;
+        if (builder.summoner != null)
+            summoner = builder.summoner;
+        if (builder.region != null)
+            region = builder.region;
+        if (builder.platform != null)
+            platform = builder.platform;
     }
 
     public static void setApiKey(String API_KEY) {
         LoLService.API_KEY = API_KEY;
     }
 
+    /**
+     * Returns the pointed Summoner.
+     * 
+     * @return Summoner
+     */
     public Summoner getSummoner() {
         return summoner;
     }
 
+    /**
+     * Returns a List of the different elos that the pointed Summoner has
+     * 
+     * @return ArrayList of elos
+     * @throws IOException
+     */
     public ArrayList<LeagueEntry> getElos() throws IOException {
         ArrayList<LeagueEntry> elos = new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
@@ -122,14 +181,8 @@ public class LoLService {
 
     public LeagueEntry getElo(Queue queue) throws IOException {
         ArrayList<LeagueEntry> elos = getElos();
-        LeagueEntry outElo = null;
-        for (LeagueEntry leagueEntry : elos) {
-            if (leagueEntry.getQueueType().equals(queue.name())) {
-                outElo = leagueEntry;
-                break;
-            }
-        }
-        return outElo;
+        LeagueEntry elo = elos.stream().filter(e -> e.getQueueType().equals(queue.name())).findFirst().get();
+        return elo;
     }
 
     public ArrayList<String> getVersions() throws Exception {
@@ -143,10 +196,23 @@ public class LoLService {
 
     public String getLastVersion() throws Exception {
         ArrayList<String> versions = getVersions();
+        version = versions.get(0);
         return versions.get(0);
     }
 
+    public Champion getChampion(String id) throws Exception {
+        Optional<Champion> champ = getChampions().stream().filter(e -> e.getKey().equals(id)).findFirst();
+        if (champ.isPresent())
+            return champ.get();
+        else
+            return null;
+    }
+
     public Collection<Champion> getChampions() throws Exception {
+        if (version == null)
+            getLastVersion();
+        else if (lang == null)
+            lang = Langs.ENGLISH_UK.lang;
         Response<ChampionData> response = service
                 .getChampionsData(version, lang)
                 .execute();
@@ -172,7 +238,6 @@ public class LoLService {
                 .forSummoner(summoner)
                 .build()
                 .getGames();
-
         return history;
     }
 
@@ -189,6 +254,8 @@ public class LoLService {
     }
 
     public ArrayList<Mastery> getMasteries() throws Exception {
+        if (platform == null)
+            throw new Exception("You have to set the platform first!");
         ArrayList<Mastery> masteries = new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
                 .build()
