@@ -33,12 +33,12 @@ public class Example {
                 .setPlatform(Platform.EUROPE_WEST)
                 .setRegion(Region.EUROPE)
                 .setLang(Langs.ENGLISH_UK)
-                .setVersion("VERSION")
-                .forSummoner("SUMMONERNAME")
+                .setVersion("14.1.1")
+                .forSummoner("sexybartender","brand")
                 .build();
 
         Summoner summoner = service.getSummoner();
-
+        System.out.println(summoner);
         // Obtaining ranked solo elo from the summoner we added:
 
         LeagueEntry elo = service.getElo(Queue.RANKED_SOLO_5x5);

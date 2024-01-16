@@ -105,13 +105,13 @@ public class LoLService {
          * @param summName - Summoner Name
          * @throws Exception
          */
-        public Builder forSummoner(String summName) throws Exception {
+        public Builder forSummoner(String summName, String tagLine) throws Exception {
             if (platform == null)
                 throw new Exception("You have to set up the platform before!");
             summoner = new SummonerService.Builder(LoLService.API_KEY)
                     .setPlatform(platform)
                     .build()
-                    .getSummoner(summName);
+                    .getSummoner(summName, tagLine);
             return this;
         }
 
@@ -120,10 +120,7 @@ public class LoLService {
          * 
          * @throws IOException
          */
-        public LoLService build() throws IOException {
-            LoLService l = new LoLService(this);
-            return l;
-        }
+        public LoLService build() throws IOException { return new LoLService(this);}
     }
 
     private LoLService(Builder builder) throws IOException {
@@ -181,7 +178,7 @@ public class LoLService {
 
     public LeagueEntry getElo(Queue queue) throws IOException {
         ArrayList<LeagueEntry> elos = getElos();
-        LeagueEntry elo = elos.stream().filter(e -> e.getQueueType().equals(queue.name())).findFirst().get();
+        LeagueEntry elo = elos.stream().filter(e -> e.getQueueType().equals(queue.name())).findFirst().orElseGet(LeagueEntry::sinElo);
         return elo;
     }
 
@@ -259,7 +256,7 @@ public class LoLService {
         ArrayList<Mastery> masteries = new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
                 .build()
-                .getMasteries(summoner.getId());
+                .getMasteries(summoner.getPuuid());
         return masteries;
     }
 

@@ -1,5 +1,9 @@
 package io.github.katarem.katapi.api.game;
 
+import io.github.katarem.katapi.constants.Queue;
+
+import java.util.function.Supplier;
+
 public class LeagueEntry {
     private String queueType;
     private String tier;
@@ -54,6 +58,17 @@ public class LeagueEntry {
 
     public void setLosses(int losses) {
         this.losses = losses;
+    }
+
+    public static LeagueEntry sinElo(){
+        LeagueEntry l = new LeagueEntry();
+        l.setQueueType(Queue.UNRANKED_ALL.name());
+        l.setWins(0);
+        l.setLosses(0);
+        l.setRank("UNRANKED");
+        l.setTier("UNRANKED");
+        l.setLeaguePoints(0);
+        return l;
     }
 
     @Override

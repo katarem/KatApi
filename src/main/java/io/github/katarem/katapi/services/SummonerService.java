@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import io.github.katarem.katapi.api.RiotAccount;
 import io.github.katarem.katapi.api.Summoner;
 import io.github.katarem.katapi.api.game.LeagueEntry;
 import io.github.katarem.katapi.api.mastery.Mastery;
@@ -41,11 +42,12 @@ class SummonerService {
         }
 
         public Builder setPlatform(Platform platform) {
-            this.BASE_URL = String.format("https://%s.api.riotgames.com/lol/", platform.server);
+            this.BASE_URL = String.format("https://%s.api.riotgames.com/", platform.server);
             return this;
         }
 
         public SummonerService build() {
+            if(this.BASE_URL.isEmpty()) this.BASE_URL = "https://euw1.api.riotgames.com/"; //if sm1 doesn't specify, just get the europe one
             return new SummonerService(this);
         }
     }
@@ -78,9 +80,10 @@ class SummonerService {
      * @return summoner if the call fails it will just throw an IOException
      * @throws IOException
      */
-    public Summoner getSummoner(String summonerName) throws IOException {
+    public Summoner getSummoner(String summonerName, String tagLine) throws IOException {
+        var account = AccountService.getPUUID(summonerName,tagLine, API_KEY);
         Response<Summoner> response = service
-                .getSummoner(summonerName, API_KEY)
+                .getSummoner(account, API_KEY)
                 .execute();
         Summoner summoner = response.body();
         return summoner;

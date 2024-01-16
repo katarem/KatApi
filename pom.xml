@@ -9,8 +9,8 @@
   <description>Library to use the Riot League of Legends' related APIs</description>
   <url>https://github.com/katarem/KatApi</url>
   <properties>
-		<maven.compiler.source>15</maven.compiler.source>
-		<maven.compiler.target>15</maven.compiler.target>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<exec.mainClass>io.github.katarem.katapi.Example</exec.mainClass>
   </properties>

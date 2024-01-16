@@ -2,6 +2,7 @@ package io.github.katarem.katapi.services;
 
 import java.util.ArrayList;
 
+import io.github.katarem.katapi.api.RiotAccount;
 import io.github.katarem.katapi.api.Summoner;
 import io.github.katarem.katapi.api.game.GameInfo;
 import io.github.katarem.katapi.api.game.LeagueEntry;
@@ -24,21 +25,25 @@ import retrofit2.http.Query;
  */
 interface LoLInterface {
 
-        @GET("summoner/v4/summoners/by-name/{summonerName}")
-        public Call<Summoner> getSummoner(@Path("summonerName") String summonerName, @Query("api_key") String API_KEY);
+        //summ names to riot ids -.-
+        @GET("riot/account/v1/accounts/by-riot-id/{summonerName}/{tagLine}")
+        public Call<RiotAccount> getAccount(@Path("summonerName") String summonerName, @Path("tagLine") String tagLine, @Query("api_key") String API_KEY);
 
-        @GET("match/v5/matches/by-puuid/{puuid}/ids")
+        @GET("lol/summoner/v4/summoners/by-puuid/{summonerPUUID}")
+        public Call<Summoner> getSummoner(@Path("summonerPUUID") String summonerPUUID, @Query("api_key") String API_KEY);
+
+        @GET("lol/match/v5/matches/by-puuid/{puuid}/ids")
         public Call<ArrayList<String>> getGames(@Path("puuid") String puuid, @Query("api_key") String API_KEY);
 
-        @GET("match/v5/matches/{matchId}")
+        @GET("lol/match/v5/matches/{matchId}")
         public Call<GameInfo> getGame(@Path("matchId") String matchId, @Query("api_key") String API_KEY);
 
-        @GET("league/v4/entries/by-summoner/{encryptedSummonerId}")
+        @GET("lol/league/v4/entries/by-summoner/{encryptedSummonerId}")
         public Call<ArrayList<LeagueEntry>> getElos(@Path("encryptedSummonerId") String summonerId,
                         @Query("api_key") String API_KEY);
 
-        @GET("champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}")
-        public Call<ArrayList<Mastery>> getMasteries(@Path("encryptedSummonerId") String summonerId,
+        @GET("lol/champion-mastery/v4/champion-masteries/by-puuid/{encryptedSummonerPUUID}")
+        public Call<ArrayList<Mastery>> getMasteries(@Path("encryptedSummonerPUUID") String summonerPUUID,
                         @Query("api_key") String API_KEY);
 
         @GET("api/versions.json")

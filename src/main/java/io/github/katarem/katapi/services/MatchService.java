@@ -39,7 +39,7 @@ class MatchService {
         }
 
         public Builder setRegion(Region r) {
-            this.BASE_URL = String.format("https://%S.api.riotgames.com/lol/", r.server);
+            this.BASE_URL = String.format("https://%S.api.riotgames.com/", r.server);
             return this;
         }
 
@@ -94,7 +94,6 @@ class MatchService {
         Response<ArrayList<String>> response = service
                 .getGames(s.getPuuid(), API_KEY)
                 .execute();
-        assertResponse(response);
         ArrayList<String> history = response.body();
         return history;
     }
