@@ -114,7 +114,6 @@ class SummonerService {
     }
 
     public CurrentGame getCurrentGame(String summonerId) throws IOException {
-
         Response<CurrentGame> response = service.getCurrentGame(summonerId, API_KEY)
                 .execute();
         CurrentGame currentGame = response.body();

@@ -34,24 +34,23 @@ public class Example {
                 .setRegion(Region.EUROPE)
                 .setLang(Langs.ENGLISH_UK)
                 .setVersion("14.1.1")
-                .forSummoner("sexybartender","brand")
+                .forSummoner("Bubbly","KOI")
                 .build();
 
         Summoner summoner = service.getSummoner();
-        System.out.println(summoner);
         // Obtaining ranked solo elo from the summoner we added:
-
+        /*
         LeagueEntry elo = service.getElo(Queue.RANKED_SOLO_5x5);
         System.out.println(elo.getTier() + " " + elo.getRank() + " " + elo.getLeaguePoints() + "LP");
-
+        */
         // Obtaining masteries from the summoner:
-
+        /*
         ArrayList<Mastery> masteries = service.getMasteries();
         System.out.println(masteries.get(0).getChampionPoints() + " points");
-
+           */
         // Obtaining winrate from the last 20 games:
 
-        ArrayList<String> games = service.getGames();
+        /*ArrayList<String> games = service.getGames();
         for (String gameId : games) {
             GameInfo game = service.getGame(gameId);
             // do whatever you want with the game, for example obtaining info from our
@@ -61,12 +60,13 @@ public class Example {
             if (player.isPresent() && player.get().getWin()) {
                 System.out.println("you won this game");
             }
-        }
+        }*/
 
         // Get a specific champion
 
         Collection<Champion> champs = service.getChampions();
-        Optional<Champion> champ = champs.stream().filter(e -> e.getName().equals("Katarina")).findAny();
+
+        /*Optional<Champion> champ = champs.stream().filter(e -> e.getName().equals("Katarina")).findAny();
         System.out.println(champ.get().getBlurb());
 
         // Print the masteries
@@ -77,7 +77,7 @@ public class Example {
                             + mastery.getChampionPoints() + " points");
                 }
             }
-        }
+        }*/
 
         // Get the current game (if the summoner is playing a game) and the champ the
         // summoner is playing
