@@ -25,7 +25,7 @@ public class Mastery {
     private Long championPointsUntilNextLevel;
     @SerializedName("chestGranted")
     @Expose
-    private Boolean chestGranted;
+    private Boolean chestGranted = false;
     @SerializedName("tokensEarned")
     @Expose
     private Long tokensEarned;

@@ -2,8 +2,6 @@ package io.github.katarem.katapi.api.game;
 
 import io.github.katarem.katapi.constants.Queue;
 
-import java.util.function.Supplier;
-
 public class LeagueEntry {
     private String queueType;
     private String tier;

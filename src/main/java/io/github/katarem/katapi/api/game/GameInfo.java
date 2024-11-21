@@ -31,4 +31,6 @@ public class GameInfo {
         this.info = info;
     }
 
+    public static GameInfo NULL = new GameInfo();
+
 }

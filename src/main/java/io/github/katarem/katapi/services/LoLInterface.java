@@ -55,7 +55,7 @@ interface LoLInterface {
         @GET("cdn/{version}/data/{lang}/item.json")
         public Call<ItemData> getItemsData(@Path("version") String version, @Path("lang") String lang);
 
-        @GET("lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}")
+        @GET("lol/spectator/v5/active-games/by-summoner/{encryptedSummonerId}")
         public Call<CurrentGame> getCurrentGame(@Path("encryptedSummonerId") String summonerId,
                         @Query("api_key") String API_KEY);
 

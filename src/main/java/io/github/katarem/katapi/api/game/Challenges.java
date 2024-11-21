@@ -1,5 +1,7 @@
 package io.github.katarem.katapi.api.game;
 
+import java.math.BigDecimal;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -25,7 +27,7 @@ public class Challenges {
     private Integer blastConeOppositeOpponentCount;
     @SerializedName("bountyGold")
     @Expose
-    private Integer bountyGold;
+    private BigDecimal bountyGold;
     @SerializedName("buffsStolen")
     @Expose
     private Integer buffsStolen;
@@ -387,11 +389,11 @@ public class Challenges {
         this.blastConeOppositeOpponentCount = blastConeOppositeOpponentCount;
     }
 
-    public Integer getBountyGold() {
+    public BigDecimal getBountyGold() {
         return bountyGold;
     }
 
-    public void setBountyGold(Integer bountyGold) {
+    public void setBountyGold(BigDecimal bountyGold) {
         this.bountyGold = bountyGold;
     }
 

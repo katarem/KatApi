@@ -19,7 +19,6 @@ public class AccountService {
 
 
     private static LoLInterface initializeService(){
-        LoLInterface service;
         String BASE_URL = "https://europe.api.riotgames.com/";
         ConnectionPool pool = new ConnectionPool(1, 5, TimeUnit.SECONDS);
 
@@ -32,7 +31,7 @@ public class AccountService {
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
-        return service = retrofit.create(LoLInterface.class);
+        return retrofit.create(LoLInterface.class);
     }
 
 

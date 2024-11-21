@@ -112,6 +112,8 @@ public class LoLService {
                     .setPlatform(platform)
                     .build()
                     .getSummoner(summName, tagLine);
+            summoner.setName(summName);
+            summoner.setTagLine(tagLine);
             return this;
         }
 
@@ -257,6 +259,7 @@ public class LoLService {
                 .setPlatform(platform)
                 .build()
                 .getMasteries(summoner.getPuuid());
+        masteries.stream().forEach(m -> m.setSummonerId(summoner.getId()));
         return masteries;
     }
 
@@ -264,7 +267,7 @@ public class LoLService {
         Optional<CurrentGame> currentGame = Optional.ofNullable(new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
                 .build()
-                .getCurrentGame(summoner.getId()));
+                .getCurrentGame(summoner.getPuuid()));
         return currentGame;
     }
 

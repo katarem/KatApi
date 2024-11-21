@@ -4,18 +4,27 @@ package io.github.katarem.katapi.api;
  * JavaBean to get the Summoner data
  */
 public class Summoner {
-    String name;
+    String gameName;
+    String tagLine;
     String id;
     String puuid;
     String profileIconId;
     String summonerLevel;
 
+    public String getTagLine() {
+        return tagLine;
+    }
+
+    public void setTagLine(String tagLine) {
+        this.tagLine = tagLine;
+    }
+
     public String getName() {
-        return name;
+        return gameName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.gameName = name;
     }
 
     public String getPuuid() {
@@ -52,7 +61,7 @@ public class Summoner {
 
     @Override
     public String toString() {
-        return "Summoner [name=" + name + ", id=" + id + ", puuid=" + puuid + ", profileIconId=" + profileIconId
+        return "Summoner [gameName=" + gameName + ", tagLine=" + tagLine + ", id=" + id + ", puuid=" + puuid + ", profileIconId=" + profileIconId
                 + ", summonerLevel=" + summonerLevel + "]";
     }
 

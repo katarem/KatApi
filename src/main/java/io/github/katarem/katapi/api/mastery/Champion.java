@@ -4,6 +4,8 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import io.github.katarem.StringUtils;
+
 public class Champion {
 
     @SerializedName("version")
@@ -113,6 +115,8 @@ public class Champion {
     }
 
     public String getPartype() {
+        if(StringUtils.isBlankOrEmpty(partype))
+            partype = "none"; // Quick fix but I don't know why don't they sanatize their data
         return partype;
     }
 

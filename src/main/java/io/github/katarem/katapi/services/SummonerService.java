@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import io.github.katarem.katapi.api.RiotAccount;
 import io.github.katarem.katapi.api.Summoner;
 import io.github.katarem.katapi.api.game.LeagueEntry;
 import io.github.katarem.katapi.api.mastery.Mastery;

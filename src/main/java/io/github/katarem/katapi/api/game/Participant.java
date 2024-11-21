@@ -1,6 +1,8 @@
 
 package io.github.katarem.katapi.api.game;
 
+import java.math.BigDecimal;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -29,7 +31,7 @@ public class Participant {
     private Integer basicPings;
     @SerializedName("bountyLevel")
     @Expose
-    private Integer bountyLevel;
+    private BigDecimal bountyLevel;
     @SerializedName("challenges")
     @Expose
     private Challenges challenges;
@@ -421,11 +423,11 @@ public class Participant {
         this.basicPings = basicPings;
     }
 
-    public Integer getBountyLevel() {
+    public BigDecimal getBountyLevel() {
         return bountyLevel;
     }
 
-    public void setBountyLevel(Integer bountyLevel) {
+    public void setBountyLevel(BigDecimal bountyLevel) {
         this.bountyLevel = bountyLevel;
     }
 
