@@ -180,7 +180,7 @@ git push origin feature/new-feature
 ```
 Open a pull request.
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GNU License. See the [LICENSE](./LICENSE) file for details.
 
 ## Disclaimer
 You can check the disclaimer [here](https://www.termsfeed.com/live/cd778ad4-675d-40f8-a4a5-5be2829d2cd1).
