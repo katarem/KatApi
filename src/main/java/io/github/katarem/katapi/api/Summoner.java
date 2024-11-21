@@ -1,7 +1,7 @@
 package io.github.katarem.katapi.api;
 
 /***
- * JavaBean to get the Summoner data
+ * Represents a League of Legends Summoner
  */
 public class Summoner {
     String gameName;

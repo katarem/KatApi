@@ -5,6 +5,9 @@ import java.util.Map;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Champion's Mastery API Response Body
+ */
 public class ChampionData {
     @SerializedName("type")
     @Expose

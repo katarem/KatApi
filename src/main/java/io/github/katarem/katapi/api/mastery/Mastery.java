@@ -2,7 +2,10 @@ package io.github.katarem.katapi.api.mastery;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+/**
+ * Represents a Summoner's mastery
+ * @see ChampionData
+ */
 public class Mastery {
 
     @SerializedName("championId")

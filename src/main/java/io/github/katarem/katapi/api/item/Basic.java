@@ -7,6 +7,10 @@ import java.util.Map;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Basic Item Data
+ * @see Item
+ */
 public class Basic {
 
     @SerializedName("name")

@@ -5,6 +5,10 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents Runes of the game
+ * @see Participant
+ */
 public class Perks {
 
     @SerializedName("perkIds")

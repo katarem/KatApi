@@ -2,6 +2,10 @@ package io.github.katarem.katapi.api.game;
 
 import io.github.katarem.katapi.constants.Queue;
 
+/**
+ * Represents Summoner's rank in a specific Queue
+ * @see Queue
+ */
 public class LeagueEntry {
     private String queueType;
     private String tier;

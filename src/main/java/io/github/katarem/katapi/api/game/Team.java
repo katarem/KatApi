@@ -5,6 +5,10 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents a team inside a League Match
+ * @see Participant
+ */
 public class Team {
 
     @SerializedName("bans")

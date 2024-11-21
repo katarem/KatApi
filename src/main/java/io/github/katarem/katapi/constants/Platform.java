@@ -1,5 +1,8 @@
 package io.github.katarem.katapi.constants;
 
+/**
+ * Contains all the available platforms to query to
+ */
 public enum Platform {
 
     BRAZIL("br1"),

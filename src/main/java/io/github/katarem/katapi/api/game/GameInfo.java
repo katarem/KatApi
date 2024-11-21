@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /***
- * JavaBean to get a League of Legends game's data
+ * League Match
  */
 public class GameInfo {
 

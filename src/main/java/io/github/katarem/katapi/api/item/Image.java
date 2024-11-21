@@ -3,6 +3,10 @@ package io.github.katarem.katapi.api.item;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Contains the different Item's images
+ * @see Item
+ */
 public class Image {
 
     @SerializedName("full")

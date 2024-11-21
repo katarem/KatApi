@@ -5,7 +5,8 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /***
- * JavaBean to get general information of a {@link GameInfo}
+ * General Information from a match
+ * @see GameInfo
  */
 
 public class Info {

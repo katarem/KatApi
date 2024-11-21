@@ -4,6 +4,10 @@ package io.github.katarem.katapi.api.game;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents the tower takedowns inside a Team
+ * @see Objectives
+ */
 public class Tower {
 
     @SerializedName("first")

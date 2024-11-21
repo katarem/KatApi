@@ -7,7 +7,8 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /***
- * JavaBean to get the player's data from a {@link GameInfo}
+ * Player Data from a Match
+ * @see GameInfo
  */
 public class Participant {
 

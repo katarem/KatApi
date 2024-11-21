@@ -1,10 +1,7 @@
 package io.github.katarem.katapi.api;
 
 /***
- * @author katarem
- * <p>
- * Corresponding to Summoner names change to Riot ID's we need to store the Riot ID's data
- * </p>
+ * Represents a Riot Account for many games
  */
 public class RiotAccount {
 

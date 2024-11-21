@@ -1,5 +1,8 @@
 package io.github.katarem.katapi.constants;
 
+/**
+ * Contains all the available languages
+ */
 public enum Langs {
     CZECH("cs_CZ"),
     GREEK("el_GR"),

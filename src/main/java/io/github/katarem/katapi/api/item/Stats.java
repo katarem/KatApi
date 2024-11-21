@@ -4,6 +4,10 @@ package io.github.katarem.katapi.api.item;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Item stats
+ * @see Item
+ */
 public class Stats {
 
     @SerializedName("FlatHPPoolMod")

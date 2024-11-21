@@ -5,6 +5,9 @@ import java.math.BigDecimal;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents the values counting for the player's Challenges
+ */
 public class Challenges {
 
     @SerializedName("12AssistStreakCount")

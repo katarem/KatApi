@@ -3,6 +3,10 @@ package io.github.katarem.katapi.api.mastery;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Champion Info
+ * @see Champion
+ */
 public class Info {
 
     @SerializedName("attack")

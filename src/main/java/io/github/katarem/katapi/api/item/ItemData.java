@@ -5,6 +5,9 @@ import java.util.Map;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Contains the items data from a version
+ */
 public class ItemData {
 
     @SerializedName("type")

@@ -6,7 +6,9 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /***
- * JavaBean to get the perks (runes) data from {@link GameInfo}
+ * Runes data from player
+ * @see Participant
+ * @see GameInfo
  */
 public class Perks {
 

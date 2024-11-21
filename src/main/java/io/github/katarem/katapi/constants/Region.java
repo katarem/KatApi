@@ -1,5 +1,8 @@
 package io.github.katarem.katapi.constants;
 
+/**
+ * Contains all the regions to query to
+ */
 public enum Region {
     AMERICAS("americas"),
     ASIA("asia"),

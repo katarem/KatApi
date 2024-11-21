@@ -2,7 +2,10 @@ package io.github.katarem.katapi.api.item;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+/**
+ * Represents the item's gold costs
+ * @see Item
+ */
 public class Gold {
 
     @SerializedName("base")

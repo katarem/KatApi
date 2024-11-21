@@ -3,6 +3,10 @@ package io.github.katarem.katapi.api.mastery;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Contains all the Champion's images
+ * @see Champion
+ */
 public class Image {
 
     @SerializedName("full")

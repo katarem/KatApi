@@ -3,7 +3,10 @@ package io.github.katarem.katapi.api.game;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+/**
+ * Rune's stats
+ * @see Perks
+ */
 public class StatPerks {
 
     @SerializedName("defense")

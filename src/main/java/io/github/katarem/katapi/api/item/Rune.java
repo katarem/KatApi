@@ -4,6 +4,9 @@ package io.github.katarem.katapi.api.item;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Contains rune data
+ */
 public class Rune {
 
     @SerializedName("isrune")

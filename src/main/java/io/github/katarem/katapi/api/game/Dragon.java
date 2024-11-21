@@ -3,7 +3,9 @@ package io.github.katarem.katapi.api.game;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+/**
+ * Represents the dragon kills for the team
+ */
 public class Dragon {
 
     @SerializedName("first")
