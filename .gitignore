@@ -1,6 +1,6 @@
 *.props
 src/main/java/io/github/katarem/katapi/Debug.java
-target/
+target/** 
 config.properties
 .idea
 .vscode
