@@ -1,5 +1,5 @@
 
-<div style='display:flex;flex-direction:row;justify-content:center;'>
+<div align='center' style='display:flex;flex-direction:row;justify-content:center;'>
     <img style='margin-right:10px;' src='https://img.shields.io/badge/java-21-yellow'>
     <img style='margin-right:10px;' src='https://img.shields.io/badge/retrofit-2-red'>
     <img style='margin-right:10px;' src='https://img.shields.io/badge/tests-passing-green'>
