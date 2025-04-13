@@ -12,6 +12,7 @@ import io.github.katarem.katapi.api.Summoner;
 import io.github.katarem.katapi.api.game.GameInfo;
 import io.github.katarem.katapi.api.game.LeagueEntry;
 import io.github.katarem.katapi.api.mastery.*;
+import io.github.katarem.katapi.api.param.GameParam;
 import io.github.katarem.katapi.api.spectator.CurrentGame;
 import io.github.katarem.katapi.constants.Langs;
 import io.github.katarem.katapi.constants.Platform;
@@ -66,7 +67,8 @@ public class Example {
         List<GameInfo> games = service.getGames()
             .stream().map(gameId -> {
                 try {
-                    return service.getGame(gameId);
+                    GameParam param = new GameParam(gameId, 1, null, null, null, null, null);
+                    return service.getGame(param);
                 } catch (Exception e) {
                     e.printStackTrace();
                     return GameInfo.NULL;

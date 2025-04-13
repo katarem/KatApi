@@ -36,7 +36,15 @@ interface LoLInterface {
         public Call<ArrayList<String>> getGames(@Path("puuid") String puuid, @Query("api_key") String API_KEY);
 
         @GET("lol/match/v5/matches/{matchId}")
-        public Call<GameInfo> getGame(@Path("matchId") String matchId, @Query("api_key") String API_KEY);
+        public Call<GameInfo> getGame(
+                @Path("matchId") String matchId, 
+                @Query("api_key") String API_KEY, 
+                @Query("count") Integer count, 
+                @Query("startTime") Long startTime, 
+                @Query("endTime") Long endTime, 
+                @Query("queue") Integer queue, 
+                @Query("type") String type, 
+                @Query("start") Integer start);
 
         @GET("lol/league/v4/entries/by-summoner/{encryptedSummonerId}")
         public Call<ArrayList<LeagueEntry>> getElos(@Path("encryptedSummonerId") String summonerId,

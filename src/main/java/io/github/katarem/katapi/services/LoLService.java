@@ -15,6 +15,7 @@ import io.github.katarem.katapi.api.item.ItemData;
 import io.github.katarem.katapi.api.mastery.Champion;
 import io.github.katarem.katapi.api.mastery.ChampionData;
 import io.github.katarem.katapi.api.mastery.Mastery;
+import io.github.katarem.katapi.api.param.GameParam;
 import io.github.katarem.katapi.api.spectator.CurrentGame;
 import io.github.katarem.katapi.constants.Langs;
 import io.github.katarem.katapi.constants.Platform;
@@ -257,14 +258,14 @@ public class LoLService {
         return history;
     }
 
-    public GameInfo getGame(String matchID) throws Exception {
+    public GameInfo getGame(GameParam params) throws Exception {
 
         GameInfo match = new MatchService.Builder()
                 .setRegion(region)
                 .setApiKey(API_KEY)
                 .forSummoner(summoner)
                 .build()
-                .getGame(matchID);
+                .getGame(params);
 
         return match;
     }

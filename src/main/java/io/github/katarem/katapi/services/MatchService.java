@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 
 import io.github.katarem.katapi.api.Summoner;
 import io.github.katarem.katapi.api.game.GameInfo;
+import io.github.katarem.katapi.api.param.GameParam;
 import io.github.katarem.katapi.constants.Region;
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
@@ -98,17 +99,19 @@ class MatchService {
         return history;
     }
 
-    /***
-     * Gets a List of {@link GameInfo} from the gameId we passed through
-     * 
-     * @param matchID this is the gameId, it can be obtained through the
-     *                {@link MatchService#getGames(String, String)} method
-     * @return List of {@link GameInfo}
-     * @throws Exception
+    
+    /**
+     * Retrieves game information based on the provided parameters.
+     *
+     * @param params The parameters required to fetch the game information, including match ID,
+     *               count, start time, end time, queue, type, and start index.
+     * @return The game information as a {@link GameInfo} object.
+     * @throws Exception If an error occurs during the API request or response processing.
      */
-    public GameInfo getGame(String matchID) throws Exception {
+    public GameInfo getGame(GameParam params) throws Exception {
         Response<GameInfo> response = service
-                .getGame(matchID, API_KEY)
+                .getGame(params.matchId, API_KEY, params.count, params.startTime, params.endTime, params.queue,
+                        params.type, params.start)
                 .execute();
         assertResponse(response);
         GameInfo match = response.body();
