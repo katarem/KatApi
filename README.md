@@ -42,7 +42,7 @@ Add KatAPI as a dependency:
 <dependency>
     <groupId>io.github.katarem</groupId>
     <artifactId>KatApi</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 #### Gradle
@@ -54,7 +54,7 @@ repositories {
 ```
 Add KatAPI as a dependency:
 ```gradle
-implementation 'io.github.katarem:KatApi:1.1.0'
+implementation 'io.github.katarem:KatApi:1.1.1'
 ```
 ## Getting Started
 Register as a developer on the Riot Games Developer Portal.

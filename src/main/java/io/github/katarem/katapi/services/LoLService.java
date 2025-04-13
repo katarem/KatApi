@@ -165,6 +165,23 @@ public class LoLService {
     }
 
     /**
+     * Returns a summoner by its name and tag line. It needs to have a selected
+     * {@link Platform} BEFORE calling this part of the builder.
+     * @return Summoner
+     * @throws IOException
+     */
+    public Summoner getSummoner(String summName, String tagLine) throws IOException {
+        if (platform == null)
+            throw new IOException("You have to set the platform first!");
+        Summoner summoner = new SummonerService.Builder(API_KEY)
+                .setPlatform(platform)
+                .build()
+                .getSummoner(summName, tagLine);
+        return summoner;
+    }
+
+
+    /**
      * Returns a List of the different elos that the pointed Summoner has
      * 
      * @return ArrayList of elos
