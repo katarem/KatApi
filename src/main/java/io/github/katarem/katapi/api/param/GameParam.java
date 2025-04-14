@@ -1,7 +1,7 @@
 package io.github.katarem.katapi.api.param;
 
 public class GameParam {
-    public String matchId;
+    public String puuid;
     public int count = 20;
     public Long startTime = null; //default value
     public Long endTime = null; //default value
@@ -9,11 +9,11 @@ public class GameParam {
     public String type = null; //default value
     public Integer start = null; //default value
 
-    public String getMatchId() {
-        return matchId;
+    public String getPuuid() {
+        return puuid;
     }
-    public void setMatchId(String matchId) {
-        this.matchId = matchId;
+    public void setPuuid(String matchId) {
+        this.puuid = matchId;
     }
     public int getCount() {
         return count;
@@ -53,7 +53,7 @@ public class GameParam {
     }
     public GameParam(String matchId, int count, Long startTime, Long endTime, Integer queue, String type,
             Integer start) {
-        this.matchId = matchId;
+        this.puuid = matchId;
         this.count = count;
         this.startTime = startTime;
         this.endTime = endTime;

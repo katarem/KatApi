@@ -27,13 +27,11 @@ class MatchService {
     private Gson gson = new Gson();
     private LoLInterface service;
     private String API_KEY;
-    private Summoner s;
 
     protected static class Builder {
 
         private String BASE_URL;
         private String API_KEY;
-        private Summoner s;
 
         public Builder() {
 
@@ -49,11 +47,6 @@ class MatchService {
             return this;
         }
 
-        public Builder forSummoner(Summoner s) {
-            this.s = s;
-            return this;
-        }
-
         public MatchService build() {
             return new MatchService(this);
         }
@@ -66,7 +59,6 @@ class MatchService {
 
         this.API_KEY = builder.API_KEY;
         this.BASE_URL = builder.BASE_URL;
-        this.s = builder.s;
 
         // Creating the service
         ConnectionPool pool = new ConnectionPool(1, 5, TimeUnit.SECONDS);
@@ -91,27 +83,28 @@ class MatchService {
      *              the search
      * @return history List of gameIds
      */
-    public ArrayList<String> getGames() throws Exception {
+    public ArrayList<String> getGames(GameParam params) throws Exception {
         Response<ArrayList<String>> response = service
-                .getGames(s.getPuuid(), API_KEY)
+                .getGames(params.puuid, API_KEY, params.count, params.startTime, params.endTime,
+                        params.queue, params.type, params.start)
                 .execute();
         ArrayList<String> history = response.body();
         return history;
     }
 
-    
     /**
      * Retrieves game information based on the provided parameters.
      *
-     * @param params The parameters required to fetch the game information, including match ID,
+     * @param params The parameters required to fetch the game information,
+     *               including match ID,
      *               count, start time, end time, queue, type, and start index.
      * @return The game information as a {@link GameInfo} object.
-     * @throws Exception If an error occurs during the API request or response processing.
+     * @throws Exception If an error occurs during the API request or response
+     *                   processing.
      */
-    public GameInfo getGame(GameParam params) throws Exception {
+    public GameInfo getGame(String gameId) throws Exception {
         Response<GameInfo> response = service
-                .getGame(params.matchId, API_KEY, params.count, params.startTime, params.endTime, params.queue,
-                        params.type, params.start)
+                .getGame(gameId, API_KEY)
                 .execute();
         assertResponse(response);
         GameInfo match = response.body();

@@ -63,12 +63,12 @@ public class Example {
         }
 
         // Obtaining winrate from the last 20 games:
+        GameParam param = new GameParam(summoner.getPuuid(), 20, null, null, null, null, null);
 
-        List<GameInfo> games = service.getGames()
+        List<GameInfo> games = service.getGames(param)
             .stream().map(gameId -> {
                 try {
-                    GameParam param = new GameParam(gameId, 1, null, null, null, null, null);
-                    return service.getGame(param);
+                    return service.getGame(gameId);
                 } catch (Exception e) {
                     e.printStackTrace();
                     return GameInfo.NULL;
@@ -83,7 +83,7 @@ public class Example {
                 return player.isPresent() ? player.get().getWin() : false;
             })
             .toList();
-            System.out.printf("%d won games of %s\n",games.size(),service.getGames().size());
+            System.out.printf("%d won games of %s\n",games.size(),service.getGames(param).size());
             
         // Get a specific champion
 

@@ -25,26 +25,28 @@ import retrofit2.http.Query;
  */
 interface LoLInterface {
 
-        //summ names to riot ids -.-
+        // summ names to riot ids -.-
         @GET("riot/account/v1/accounts/by-riot-id/{summonerName}/{tagLine}")
-        public Call<RiotAccount> getAccount(@Path("summonerName") String summonerName, @Path("tagLine") String tagLine, @Query("api_key") String API_KEY);
+        public Call<RiotAccount> getAccount(@Path("summonerName") String summonerName, @Path("tagLine") String tagLine,
+                        @Query("api_key") String API_KEY);
 
         @GET("lol/summoner/v4/summoners/by-puuid/{summonerPUUID}")
-        public Call<Summoner> getSummoner(@Path("summonerPUUID") String summonerPUUID, @Query("api_key") String API_KEY);
+        public Call<Summoner> getSummoner(@Path("summonerPUUID") String summonerPUUID,
+                        @Query("api_key") String API_KEY);
 
         @GET("lol/match/v5/matches/by-puuid/{puuid}/ids")
-        public Call<ArrayList<String>> getGames(@Path("puuid") String puuid, @Query("api_key") String API_KEY);
+        public Call<ArrayList<String>> getGames(@Path("puuid") String puuid, @Query("api_key") String API_KEY,
+                        @Query("count") Integer count,
+                        @Query("startTime") Long startTime,
+                        @Query("endTime") Long endTime,
+                        @Query("queue") Integer queue,
+                        @Query("type") String type,
+                        @Query("start") Integer start);
 
         @GET("lol/match/v5/matches/{matchId}")
         public Call<GameInfo> getGame(
-                @Path("matchId") String matchId, 
-                @Query("api_key") String API_KEY, 
-                @Query("count") Integer count, 
-                @Query("startTime") Long startTime, 
-                @Query("endTime") Long endTime, 
-                @Query("queue") Integer queue, 
-                @Query("type") String type, 
-                @Query("start") Integer start);
+                        @Path("matchId") String matchId,
+                        @Query("api_key") String API_KEY);
 
         @GET("lol/league/v4/entries/by-summoner/{encryptedSummonerId}")
         public Call<ArrayList<LeagueEntry>> getElos(@Path("encryptedSummonerId") String summonerId,

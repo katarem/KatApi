@@ -248,24 +248,22 @@ public class LoLService {
         return items;
     }
 
-    public ArrayList<String> getGames() throws Exception {
+    public ArrayList<String> getGames(GameParam params) throws Exception {
         ArrayList<String> history = new MatchService.Builder()
                 .setRegion(region)
                 .setApiKey(API_KEY)
-                .forSummoner(summoner)
                 .build()
-                .getGames();
+                .getGames(params);
         return history;
     }
 
-    public GameInfo getGame(GameParam params) throws Exception {
+    public GameInfo getGame(String matchId) throws Exception {
 
         GameInfo match = new MatchService.Builder()
                 .setRegion(region)
                 .setApiKey(API_KEY)
-                .forSummoner(summoner)
                 .build()
-                .getGame(params);
+                .getGame(matchId);
 
         return match;
     }
