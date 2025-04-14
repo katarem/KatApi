@@ -8,9 +8,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class AccountService {
+class AccountService {
 
-    public static String getPUUID(String summName, String tagLine, String API_KEY) throws IOException {
+    static String getPUUID(String summName, String tagLine, String API_KEY) throws IOException {
         var service = initializeService();
         var call = service.getAccount(summName, tagLine, API_KEY);
         return call.execute().body().getPuuid();

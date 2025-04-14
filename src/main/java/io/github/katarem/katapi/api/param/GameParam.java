@@ -9,6 +9,9 @@ public class GameParam {
     public String type = null; //default value
     public Integer start = null; //default value
 
+    public GameParam() {
+    }
+
     public String getPuuid() {
         return puuid;
     }
