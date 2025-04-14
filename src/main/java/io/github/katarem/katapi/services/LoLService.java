@@ -291,6 +291,22 @@ public class LoLService {
         this.summoner = summoner;
     }
 
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public void setLang(String lang) {
+        this.lang = lang;
+    }
+
+    public void setPlatform(Platform platform) {
+        this.platform = platform;
+    }
+
+    public void setRegion(Region region) {
+        this.region = region;
+    }
+
     private void assertResponse(Response<?> response) throws Exception {
         if (!response.isSuccessful()) {
             ErrorMessage error = gson.fromJson(response.errorBody().string(), ErrorMessage.class);
