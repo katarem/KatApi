@@ -22,6 +22,7 @@ public class Tests {
 
     private LoLService service;
     private String playerName;
+
     @Before
     public void setUp(){
         Properties properties = new Properties();
@@ -35,7 +36,6 @@ public class Tests {
             
             this.playerName = playerName[0];
             LoLService.setApiKey(apiKey);
-
             service = new LoLService.Builder()
                 .setLang(Langs.ENGLISH_UK)
                 .setPlatform(Platform.EUROPE_WEST)
@@ -62,7 +62,7 @@ public class Tests {
 
     @Test
     public void service_should_fetch_masteries() throws Exception {
-        List<Mastery> masteries = service.getMasteries();
+        List<Mastery> masteries = service.getMasteries(Platform.EUROPE_WEST);
         Assert.assertNotNull(masteries);
         Assert.assertFalse(masteries.isEmpty());
         masteries.forEach(mastery -> {
@@ -81,7 +81,7 @@ public class Tests {
 
     @Test
     public void service_should_fetch_champions() throws Exception{
-        Collection<Champion> champions = service.getChampions();
+        Collection<Champion> champions = service.getChampions(Langs.ENGLISH_UK);
         Assert.assertNotNull(champions);
         Assert.assertFalse(champions.isEmpty());
         champions.forEach(champion -> {
