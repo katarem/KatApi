@@ -4,7 +4,7 @@
   <groupId>io.github.katarem.katapi</groupId>
   <artifactId>KatApi</artifactId>
   <packaging>jar</packaging>
-  <version>1.1.1</version>
+  <version>1.2.0</version>
   <name>KatApi</name>
   <description>Library to use the Riot League of Legends' related APIs</description>
   <url>https://github.com/katarem/KatApi</url>
