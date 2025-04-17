@@ -36,6 +36,7 @@ public class Example {
         // First we initialize the service with the api key
         LoLService.setApiKey(apiKey);
 
+        // You can set up everything here in the builder
         LoLService service = new LoLService.Builder()
                 .setPlatform(Platform.EUROPE_WEST)
                 .setRegion(Region.EUROPE)
@@ -47,15 +48,19 @@ public class Example {
         Summoner summoner = service.getSummoner();
 
         // Obtaining ranked solo elo from the summoner we added:
-        
-        LeagueEntry elo = service.getElo(Queue.RANKED_SOLO_5x5);
+        // You can pass the platform in the constructor or use the one we set in the builder
+        LeagueEntry elo = service.getElo(Queue.RANKED_SOLO_5x5, Platform.EUROPE_WEST);
         System.out.println(elo.getTier() + " " + elo.getRank() + " " + elo.getLeaguePoints() + "LP");
     
         // Obtaining masteries from the summoner:
         
-        ArrayList<Mastery> masteries = service.getMasteries();
+        // You can pass the platform in the constructor or use the one we set in the builder
+        ArrayList<Mastery> masteries = service.getMasteries(null);
         for (Mastery mastery : masteries) {
-            String championName = service.getChampion(mastery.getChampionId().toString()).getName();
+            // You can pass the language in the constructor or use the one we set in the builder
+            Champion champion = service.getChampion(mastery.getChampionId().toString(), Langs.CHINESE_CHINA)
+                .orElseThrow(() -> new Exception("Champion not found"));
+            String championName = champion.getName();
             System.out.printf("%s - Mastery [%d] %d points\n",
             championName,
             mastery.getChampionLevel(),
@@ -63,7 +68,8 @@ public class Example {
         }
 
         // Obtaining winrate from the last 20 games:
-        GameParam param = new GameParam(summoner.getPuuid(), 20, null, null, null, null, null);
+        // You can pass the language in the constructor or use the one we set in the builder
+        GameParam param = new GameParam(summoner.getPuuid(), 20, null, null, null, null, null, Langs.ENGLISH_UK);
 
         List<GameInfo> games = service.getGames(param)
             .stream().map(gameId -> {
@@ -87,14 +93,15 @@ public class Example {
             
         // Get a specific champion
 
-        Collection<Champion> champs = service.getChampions();
+        Collection<Champion> champs = service.getChampions(null);
 
         Optional<Champion> champ = champs.stream().filter(e -> e.getName().equals("Katarina")).findAny();
         System.out.println(champ.get().getBlurb());
 
         // Get the current game (if the summoner is playing a game) and the champ the
         // summoner is playing
-        Optional<CurrentGame> currentGame = service.getCurrentGame();
+        // You can pass the platform in the constructor or use the one we set in the builder
+        Optional<CurrentGame> currentGame = service.getCurrentGame(Platform.BRAZIL);
         if (currentGame.isPresent()) {
             Optional<io.github.katarem.katapi.api.spectator.Participant> par = currentGame
                     .get()

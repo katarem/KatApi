@@ -123,7 +123,9 @@ public class LoLService {
          * 
          * @throws IOException
          */
-        public LoLService build() throws IOException { return new LoLService(this);}
+        public LoLService build() throws IOException {
+            return new LoLService(this);
+        }
     }
 
     private LoLService(Builder builder) throws IOException {
@@ -168,6 +170,7 @@ public class LoLService {
     /**
      * Returns a summoner by its name and tag line. It needs to have a selected
      * {@link Platform} BEFORE calling this part of the builder.
+     * 
      * @return Summoner
      * @throws IOException
      */
@@ -181,14 +184,17 @@ public class LoLService {
         return summoner;
     }
 
-
     /**
      * Returns a List of the different elos that the pointed Summoner has
      * 
      * @return ArrayList of elos
-     * @throws IOException
+     * @throws Exception
      */
-    public ArrayList<LeagueEntry> getElos() throws IOException {
+    public ArrayList<LeagueEntry> getElos(Platform platform) throws Exception {
+        if (platform == null && this.platform == null)
+            throw new Exception("You have to set the platform first!");
+        if (platform == null)
+            platform = this.platform;
         ArrayList<LeagueEntry> elos = new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
                 .build()
@@ -196,9 +202,14 @@ public class LoLService {
         return elos;
     }
 
-    public LeagueEntry getElo(Queue queue) throws IOException {
-        ArrayList<LeagueEntry> elos = getElos();
-        LeagueEntry elo = elos.stream().filter(e -> e.getQueueType().equals(queue.name())).findFirst().orElseGet(LeagueEntry::sinElo);
+    public LeagueEntry getElo(Queue queue, Platform platform) throws Exception {
+        if (platform == null && this.platform == null)
+            throw new Exception("You have to set the platform first!");
+        if (platform == null)
+            platform = this.platform;
+        ArrayList<LeagueEntry> elos = getElos(platform);
+        LeagueEntry elo = elos.stream().filter(e -> e.getQueueType().equals(queue.name())).findFirst()
+                .orElseGet(LeagueEntry::sinElo);
         return elo;
     }
 
@@ -213,25 +224,27 @@ public class LoLService {
 
     public String getLastVersion() throws Exception {
         ArrayList<String> versions = getVersions();
-        version = versions.get(0);
-        return versions.get(0);
+        return versions.getFirst();
     }
 
-    public Champion getChampion(String id) throws Exception {
-        Optional<Champion> champ = getChampions().stream().filter(e -> e.getKey().equals(id)).findFirst();
-        if (champ.isPresent())
-            return champ.get();
-        else
-            return null;
+    public Optional<Champion> getChampion(String id, Langs lang) throws Exception {
+        if (lang == null && this.lang == null)
+            throw new Exception("You have to set the lang first!");
+        if (lang == null)
+            lang = Langs.ENGLISH_UK;
+        Optional<Champion> champ = getChampions(lang).stream().filter(e -> e.getKey().equals(id)).findFirst();
+        return champ;
     }
 
-    public Collection<Champion> getChampions() throws Exception {
-        if (version == null)
-            getLastVersion();
+    public Collection<Champion> getChampions(Langs lang) throws Exception {
+        if (this.version == null)
+            this.version = getLastVersion();
+        else if (lang == null && this.lang == null)
+            throw new Exception("You have to set the lang first!");
         else if (lang == null)
-            lang = Langs.ENGLISH_UK.lang;
+            lang = Langs.ENGLISH_UK;
         Response<ChampionData> response = service
-                .getChampionsData(version, lang)
+                .getChampionsData(version, lang.lang)
                 .execute();
         assertResponse(response);
         ChampionData champions = response.body();
@@ -239,9 +252,15 @@ public class LoLService {
         return champs;
     }
 
-    public ItemData getItemsData() throws Exception {
+    public ItemData getItemsData(Langs lang) throws Exception {
+        if (this.version == null)
+            this.version = getLastVersion();
+        else if (lang == null && this.lang == null)
+            throw new Exception("You have to set the lang first!");
+        else if (lang == null)
+            lang = Langs.ENGLISH_UK;
         Response<ItemData> response = service
-                .getItemsData(version, lang)
+                .getItemsData(version, lang.lang)
                 .execute();
         assertResponse(response);
         ItemData items = response.body();
@@ -268,9 +287,11 @@ public class LoLService {
         return match;
     }
 
-    public ArrayList<Mastery> getMasteries() throws Exception {
-        if (platform == null)
+    public ArrayList<Mastery> getMasteries(Platform platform) throws Exception {
+        if (platform == null && this.platform == null)
             throw new Exception("You have to set the platform first!");
+        if (platform == null)
+            platform = this.platform;
         ArrayList<Mastery> masteries = new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
                 .build()
@@ -279,7 +300,11 @@ public class LoLService {
         return masteries;
     }
 
-    public Optional<CurrentGame> getCurrentGame() throws IOException {
+    public Optional<CurrentGame> getCurrentGame(Platform platform) throws Exception {
+        if (platform == null && this.platform == null)
+            throw new Exception("You have to set the platform first!");
+        if (platform == null)
+            platform = this.platform;
         Optional<CurrentGame> currentGame = Optional.ofNullable(new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
                 .build()

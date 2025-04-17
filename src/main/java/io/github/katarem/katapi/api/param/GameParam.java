@@ -1,5 +1,7 @@
 package io.github.katarem.katapi.api.param;
 
+import io.github.katarem.katapi.constants.Langs;
+
 public class GameParam {
     public String puuid;
     public int count = 20;
@@ -8,6 +10,7 @@ public class GameParam {
     public Integer queue = null; //default value
     public String type = null; //default value
     public Integer start = null; //default value
+    public Langs lang = Langs.ENGLISH_UK;
 
     public GameParam() {
     }
@@ -54,8 +57,14 @@ public class GameParam {
     public void setStart(Integer start) {
         this.start = start;
     }
+    public void setLang(Langs lang) {
+        this.lang = lang;
+    }
+    public Langs getLang() {
+        return lang;
+    }
     public GameParam(String matchId, int count, Long startTime, Long endTime, Integer queue, String type,
-            Integer start) {
+            Integer start, Langs lang) {
         this.puuid = matchId;
         this.count = count;
         this.startTime = startTime;
@@ -63,6 +72,7 @@ public class GameParam {
         this.queue = queue;
         this.type = type;
         this.start = start;
+        this.lang = lang;
     }
 
     
