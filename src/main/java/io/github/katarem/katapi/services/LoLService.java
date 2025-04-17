@@ -252,9 +252,11 @@ public class LoLService {
         return champs;
     }
 
-    public ItemData getItemsData(Langs lang) throws Exception {
-        if (this.version == null)
-            this.version = getLastVersion();
+    public ItemData getItemsData(Langs lang, String version) throws Exception {
+        if (version == null && this.version == null)
+            throw new Exception("You have to set the version first!");
+        if (version == null)
+            version = this.version;
         else if (lang == null && this.lang == null)
             throw new Exception("You have to set the lang first!");
         else if (lang == null)
