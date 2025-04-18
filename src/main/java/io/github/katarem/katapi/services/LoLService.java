@@ -174,9 +174,11 @@ public class LoLService {
      * @return Summoner
      * @throws IOException
      */
-    public Summoner getSummoner(String summName, String tagLine) throws IOException {
-        if (platform == null)
+    public Summoner getSummoner(String summName, String tagLine, Platform platform) throws IOException {
+        if (platform == null && this.platform == null)
             throw new IOException("You have to set the platform first!");
+        if (platform == null)
+            platform = this.platform;
         Summoner summoner = new SummonerService.Builder(API_KEY)
                 .setPlatform(platform)
                 .build()
